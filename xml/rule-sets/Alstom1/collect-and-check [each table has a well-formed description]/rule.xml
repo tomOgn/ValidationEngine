@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<collect-and-check>
+	<description>Each table has a well-formed description</description>
+	<collect type='XSLT 1' path='collect.xsl' />
+	<check type='Regex' value='(Tabella \d) [\w\s]+' />
+</collect-and-check>

@@ -1,0 +1,41 @@
+extends layout
+block head
+block content
+    #header
+        #header-logo
+            img(src='img/Alstom.png')
+        #header-headline
+            | Web Document Validator
+    .main
+        .container
+            .row
+                p
+                    span (1) Select the document to validate (docx or xml):
+                input#file-input(type='file' name='file')
+                button#button-upload.btn.btn-primary(type='submit')
+                    .upload-facade
+                        |Upload
+                    .success-facade
+                        |Successfully uploaded!
+                    .failure-facade
+                        |Failed
+                    .loading-spokes
+                        img(src='components/loading/loading-spokes.svg')
+        .container#rulesContainer
+            .row
+                p
+                    span (2) Select the rules to fire:
+                table#ruleSetsTable.display(cellspacing="0" width="100%")
+                    thead
+                        tr
+                            th File Name
+                            th Name
+                            th Description
+                button#button-validate.btn.btn-primary Validate
+        .container#containerResults
+            .row
+                p
+                    span (3) The results:
+                textarea#textareaResults
+     
+block scripts

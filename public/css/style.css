@@ -1,0 +1,86 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    padding: 10px;
+    color: #262626;
+    font-family: 'Helvetica Neue Light', 'Helvetica Neue', 'Segoe UI', Roboto, sans-serif, Arial;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.container {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em; 
+ }    
+  
+.row {
+    border-style: solid;
+    border-color: blue;
+    border-width: 2px;
+    padding: 0.5em;
+    margin: auto;
+}
+
+.row p span {
+    width: 100%;
+    margin: auto;
+    font-family: 'Helvetica Neue Light', 'Helvetica Neue', 'Segoe UI', Roboto, sans-serif, Arial;
+    font-size: 20px;
+    color: blue;
+    font-weight: 500;
+}
+
+#header {
+    text-align: center; 
+    margin-bottom: 1em;
+}
+ 
+#header-headline {
+    text-align: center;
+    font-size: 2em; 
+}
+
+#header-logo img {
+    height: 50px;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em; 
+}
+
+#file-input {
+    margin: 0 auto;
+    padding: 0.5em;
+}
+
+#rulesContainer, #containerResults {
+    display: none;
+}
+
+#button-upload, #button-validate {
+    width: 100%;
+    display: none;
+    padding: 0.5em;
+}
+
+#textareaResults {
+    width: 100%;
+    height: 500px;
+}
+
+.loading-spokes {
+    display: none; 
+}
+
+.loading-spokes img {
+    height: 0.5em; 
+}
+
+.success-facade {
+    display: none; 
+}
+
+.failure-facade {
+    display: none; 
+}

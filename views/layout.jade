@@ -1,0 +1,17 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport', content='width=device-width')
+        title= 'Web Document Validator'
+        link(rel='stylesheet', href='/components/bootstrap/dist/css/bootstrap.min.css')
+        link(rel='stylesheet', href='/components/bootstrap/dist/css/bootstrap-theme.min.css')
+        link(rel="stylesheet" href="https://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css")
+        link(rel='stylesheet', href='/css/style.css')
+        block head
+    body
+        block content
+        script(src='/components/jquery/dist/jquery.min.js')
+        script(src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js")
+        script(src='/js/upload.js')
+        block scripts
