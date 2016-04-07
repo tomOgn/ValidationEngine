@@ -1,0 +1,1886 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install' ]
+2 info using npm@2.15.0
+3 info using node@v4.4.2
+4 verbose readDependencies loading dependencies from C:\Tom\Dropbox\Projects\WebDocumentValidator\package.json
+5 verbose install where, deps [ 'C:\\Tom\\Dropbox\\Projects\\WebDocumentValidator',
+5 verbose install   [ 'basic-auth',
+5 verbose install     'body-parser',
+5 verbose install     'cookie-parser',
+5 verbose install     'dataurl',
+5 verbose install     'debug',
+5 verbose install     'express',
+5 verbose install     'jade',
+5 verbose install     'morgan',
+5 verbose install     'nedb',
+5 verbose install     'serve-favicon',
+5 verbose install     'xmldom',
+5 verbose install     'xpath',
+5 verbose install     'xregexp',
+5 verbose install     'docxtemplater',
+5 verbose install     'xslt4node',
+5 verbose install     'grunt',
+5 verbose install     'grunt-develop',
+5 verbose install     'grunt-contrib-sass',
+5 verbose install     'grunt-contrib-watch',
+5 verbose install     'request',
+5 verbose install     'time-grunt',
+5 verbose install     'load-grunt-tasks' ] ]
+6 verbose install where, peers [ 'C:\\Tom\\Dropbox\\Projects\\WebDocumentValidator', [] ]
+7 verbose installManyTop reading for lifecycle C:\Tom\Dropbox\Projects\WebDocumentValidator\package.json
+8 info preinstall web-document-validator@0.0.1
+9 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\abbrev\package.json
+10 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\accepts\package.json
+11 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\acorn\package.json
+12 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\acorn-globals\package.json
+13 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\amdefine\package.json
+14 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\ansi-regex\package.json
+15 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\ansi-styles\package.json
+16 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\argparse\package.json
+17 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\array-differ\package.json
+18 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\array-find-index\package.json
+19 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\array-flatten\package.json
+20 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\array-union\package.json
+21 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\array-uniq\package.json
+22 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\asap\package.json
+23 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\asn1\package.json
+24 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\assert-plus\package.json
+25 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\async\package.json
+26 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\aws-sign2\package.json
+27 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\balanced-match\package.json
+28 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\basic-auth\package.json
+29 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\binary-search-tree\package.json
+30 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\bl\package.json
+31 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\body-parser\package.json
+32 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\boom\package.json
+33 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\brace-expansion\package.json
+34 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\builtin-modules\package.json
+35 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\bytes\package.json
+36 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\camelcase\package.json
+37 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\camelcase-keys\package.json
+38 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\caseless\package.json
+39 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\chalk\package.json
+40 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\character-parser\package.json
+41 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\coffee-script\package.json
+42 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\colors\package.json
+43 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\combined-stream\package.json
+44 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\commander\package.json
+45 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\concat-map\package.json
+46 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\constantinople\package.json
+47 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\content-disposition\package.json
+48 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\content-type\package.json
+49 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\cookie\package.json
+50 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\cookie-parser\package.json
+51 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\cookie-signature\package.json
+52 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\core-util-is\package.json
+53 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\crc\package.json
+54 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\cryptiles\package.json
+55 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\css\package.json
+56 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\css-parse\package.json
+57 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\css-stringify\package.json
+58 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\ctype\package.json
+59 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\dargs\package.json
+60 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\dataurl\package.json
+61 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\date-time\package.json
+62 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\dateformat\package.json
+63 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\debug\package.json
+64 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\decamelize\package.json
+65 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\delayed-stream\package.json
+66 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\depd\package.json
+67 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\destroy\package.json
+68 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\docxtemplater\package.json
+69 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\ee-first\package.json
+70 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\error-ex\package.json
+71 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\escape-html\package.json
+72 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\escape-string-regexp\package.json
+73 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\esprima\package.json
+74 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\etag\package.json
+75 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\eventemitter2\package.json
+76 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\exit\package.json
+77 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\express\package.json
+78 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\faye-websocket\package.json
+79 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\figures\package.json
+80 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\finalhandler\package.json
+81 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\find-java-home\package.json
+82 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\find-up\package.json
+83 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\findup-sync\package.json
+84 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\forever-agent\package.json
+85 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\form-data\package.json
+86 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\forwarded\package.json
+87 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\fresh\package.json
+88 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\gaze\package.json
+89 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\get-stdin\package.json
+90 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\getobject\package.json
+91 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\glob\package.json
+92 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\globule\package.json
+93 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\graceful-fs\package.json
+94 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\grunt\package.json
+95 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\grunt-contrib-sass\package.json
+96 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\grunt-contrib-watch\package.json
+97 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\grunt-develop\package.json
+98 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\grunt-legacy-log\package.json
+99 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\grunt-legacy-log-utils\package.json
+100 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\grunt-legacy-util\package.json
+101 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\has-ansi\package.json
+102 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\hawk\package.json
+103 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\hoek\package.json
+104 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\hooker\package.json
+105 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\hosted-git-info\package.json
+106 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\http-errors\package.json
+107 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\http-signature\package.json
+108 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\iconv-lite\package.json
+109 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\indent-string\package.json
+110 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\inflight\package.json
+111 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\inherits\package.json
+112 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\ipaddr.js\package.json
+113 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\is-arrayish\package.json
+114 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\is-builtin-module\package.json
+115 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\is-finite\package.json
+116 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\is-promise\package.json
+117 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\is-utf8\package.json
+118 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\isarray\package.json
+119 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\jade\package.json
+120 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\java\package.json
+121 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\js-yaml\package.json
+122 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\json-stringify-safe\package.json
+123 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\jszip\package.json
+124 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\load-grunt-tasks\package.json
+125 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\load-json-file\package.json
+126 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\localforage\package.json
+127 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\lodash\package.json
+128 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\loud-rejection\package.json
+129 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\lru-cache\package.json
+130 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\map-obj\package.json
+131 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\media-typer\package.json
+132 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\memoizejs\package.json
+133 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\meow\package.json
+134 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\merge-descriptors\package.json
+135 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\methods\package.json
+136 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\mime\package.json
+137 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\mime-db\package.json
+138 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\mime-types\package.json
+139 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\minimatch\package.json
+140 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\minimist\package.json
+141 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\mkdirp\package.json
+142 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\morgan\package.json
+143 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\ms\package.json
+144 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\multimatch\package.json
+145 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\nan\package.json
+146 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\nedb\package.json
+147 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\negotiator\package.json
+148 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\node-uuid\package.json
+149 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\nopt\package.json
+150 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\noptify\package.json
+151 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\normalize-package-data\package.json
+152 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\number-is-nan\package.json
+153 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\oauth-sign\package.json
+154 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\object-assign\package.json
+155 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\on-finished\package.json
+156 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\once\package.json
+157 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\optimist\package.json
+158 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\pako\package.json
+159 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\parse-json\package.json
+160 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\parse-ms\package.json
+161 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\parseurl\package.json
+162 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\path-exists\package.json
+163 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\path-is-absolute\package.json
+164 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\path-to-regexp\package.json
+165 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\path-type\package.json
+166 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\pify\package.json
+167 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\pinkie\package.json
+168 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\pinkie-promise\package.json
+169 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\plur\package.json
+170 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\pretty-ms\package.json
+171 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\promise\package.json
+172 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\proxy-addr\package.json
+173 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\qs\package.json
+174 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\range-parser\package.json
+175 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\raw-body\package.json
+176 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\read-pkg\package.json
+177 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\read-pkg-up\package.json
+178 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\readable-stream\package.json
+179 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\redent\package.json
+180 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\repeating\package.json
+181 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\request\package.json
+182 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\rimraf\package.json
+183 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\semver\package.json
+184 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\send\package.json
+185 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\serve-favicon\package.json
+186 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\serve-static\package.json
+187 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\sigmund\package.json
+188 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\signal-exit\package.json
+189 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\sntp\package.json
+190 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\source-map\package.json
+191 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\spdx-correct\package.json
+192 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\spdx-exceptions\package.json
+193 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\spdx-expression-parse\package.json
+194 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\spdx-license-ids\package.json
+195 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\statuses\package.json
+196 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\string_decoder\package.json
+197 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\stringstream\package.json
+198 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\strip-ansi\package.json
+199 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\strip-bom\package.json
+200 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\strip-indent\package.json
+201 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\supports-color\package.json
+202 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\text-table\package.json
+203 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\time-grunt\package.json
+204 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\tiny-lr-fork\package.json
+205 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\tough-cookie\package.json
+206 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\transformers\package.json
+207 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\trim-newlines\package.json
+208 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\tunnel-agent\package.json
+209 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\type-is\package.json
+210 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\uglify-js\package.json
+211 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\underscore\package.json
+212 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\underscore.string\package.json
+213 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\unpipe\package.json
+214 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\utils-merge\package.json
+215 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\validate-npm-package-license\package.json
+216 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\vary\package.json
+217 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\void-elements\package.json
+218 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\which\package.json
+219 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\win-spawn\package.json
+220 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\with\package.json
+221 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\wordwrap\package.json
+222 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\wrappy\package.json
+223 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\xmldom\package.json
+224 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\xpath\package.json
+225 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\xregexp\package.json
+226 verbose installManyTop reading scoped package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\xslt4node\package.json
+227 info package.json asap@1.0.0 No repository field.
+228 info package.json asap@1.0.0 No license field.
+229 info package.json asn1@0.1.11 No license field.
+230 info package.json assert-plus@0.1.5 No license field.
+231 info package.json async@0.2.10 No license field.
+232 info package.json aws-sign2@0.5.0 No license field.
+233 info package.json binary-search-tree@0.2.5 No license field.
+234 info package.json boom@0.4.2 No license field.
+235 info package.json caseless@0.8.0 license should be a valid SPDX license expression
+236 info package.json coffee-script@1.3.3 No license field.
+237 info package.json colors@0.6.2 No license field.
+238 info package.json combined-stream@0.0.7 No license field.
+239 info package.json cryptiles@0.2.2 No license field.
+240 info package.json css@1.0.8 No repository field.
+241 info package.json css@1.0.8 No license field.
+242 info package.json css-stringify@1.0.5 No repository field.
+243 info package.json css-stringify@1.0.5 No license field.
+244 info package.json css-parse@1.0.4 No repository field.
+245 info package.json css-parse@1.0.4 No license field.
+246 info package.json ctype@0.5.3 No license field.
+247 info package.json dateformat@1.0.2-1.2.3 No repository field.
+248 info package.json dateformat@1.0.2-1.2.3 No license field.
+249 info package.json delayed-stream@0.0.5 No license field.
+250 info package.json esprima@1.0.4 No license field.
+251 info package.json exit@0.1.2 No license field.
+252 info package.json faye-websocket@0.4.4 'repositories' (plural) Not supported. Please pick one as the 'repository' field
+253 info package.json faye-websocket@0.4.4 No license field.
+254 info package.json find-java-home@0.1.2 license should be a valid SPDX license expression
+255 info package.json findup-sync@0.1.3 No license field.
+256 info package.json form-data@0.2.0 No license field.
+257 info package.json forever-agent@0.5.2 No license field.
+258 info package.json gaze@0.5.2 No license field.
+259 info package.json getobject@0.1.0 No license field.
+260 info package.json globule@0.1.0 No license field.
+261 info package.json graceful-fs@1.2.3 license should be a valid SPDX license expression
+262 info package.json grunt@0.4.5 No license field.
+263 info package.json grunt-contrib-sass@0.8.1 No license field.
+264 info package.json grunt-contrib-watch@0.6.1 No license field.
+265 info package.json grunt-develop@0.4.0 No license field.
+266 info package.json grunt-legacy-log-utils@0.1.1 No license field.
+267 info package.json grunt-legacy-util@0.2.0 No license field.
+268 info package.json hawk@1.1.1 No license field.
+269 info package.json hooker@0.2.3 No license field.
+270 info package.json hoek@0.9.1 No license field.
+271 info package.json js-yaml@2.0.5 license should be a valid SPDX license expression
+272 info package.json mime@1.3.4 No license field.
+273 info package.json ms@0.7.1 No license field.
+274 info package.json node-uuid@1.4.7 No license field.
+275 info package.json noptify@0.0.3 No license field.
+276 info package.json nopt@1.0.10 license should be a valid SPDX license expression
+277 info package.json oauth-sign@0.5.0 No license field.
+278 info package.json optimist@0.3.7 license should be a valid SPDX license expression
+279 info package.json rimraf@2.2.8 license should be a valid SPDX license expression
+280 info package.json sntp@0.2.4 No license field.
+281 info package.json source-map@0.1.43 No license field.
+282 info package.json string_decoder@0.10.31 string_decoder is also the name of a node core module.
+283 info package.json tiny-lr-fork@0.0.5 No license field.
+284 info package.json underscore@1.4.4 No license field.
+285 info package.json uglify-js@2.2.5 'repositories' (plural) Not supported. Please pick one as the 'repository' field
+286 info package.json uglify-js@2.2.5 No license field.
+287 info package.json underscore.string@2.2.1 No license field.
+288 info package.json utils-merge@1.0.0 No license field.
+289 info package.json win-spawn@2.0.0 license should be a valid SPDX license expression
+290 info package.json xmldom@0.1.22 No license field.
+291 info package.json xpath@0.0.22 license should be a valid SPDX license expression
+292 verbose readDependencies loading dependencies from C:\Tom\Dropbox\Projects\WebDocumentValidator\package.json
+293 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\abbrev\package.json
+294 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\accepts\package.json
+295 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\acorn\package.json
+296 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\acorn-globals\package.json
+297 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\amdefine\package.json
+298 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\ansi-regex\package.json
+299 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\ansi-styles\package.json
+300 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\argparse\package.json
+301 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\array-differ\package.json
+302 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\array-find-index\package.json
+303 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\array-flatten\package.json
+304 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\array-union\package.json
+305 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\array-uniq\package.json
+306 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\asap\package.json
+307 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\asn1\package.json
+308 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\assert-plus\package.json
+309 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\async\package.json
+310 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\aws-sign2\package.json
+311 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\balanced-match\package.json
+312 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\basic-auth\package.json
+313 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\binary-search-tree\package.json
+314 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\bl\package.json
+315 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\body-parser\package.json
+316 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\boom\package.json
+317 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\brace-expansion\package.json
+318 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\builtin-modules\package.json
+319 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\bytes\package.json
+320 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\camelcase\package.json
+321 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\camelcase-keys\package.json
+322 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\caseless\package.json
+323 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\chalk\package.json
+324 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\character-parser\package.json
+325 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\coffee-script\package.json
+326 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\colors\package.json
+327 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\combined-stream\package.json
+328 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\commander\package.json
+329 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\concat-map\package.json
+330 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\constantinople\package.json
+331 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\content-disposition\package.json
+332 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\content-type\package.json
+333 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\cookie\package.json
+334 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\cookie-parser\package.json
+335 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\cookie-signature\package.json
+336 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\core-util-is\package.json
+337 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\crc\package.json
+338 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\cryptiles\package.json
+339 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\css\package.json
+340 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\css-parse\package.json
+341 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\css-stringify\package.json
+342 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\ctype\package.json
+343 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\dargs\package.json
+344 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\dataurl\package.json
+345 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\date-time\package.json
+346 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\dateformat\package.json
+347 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\debug\package.json
+348 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\decamelize\package.json
+349 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\delayed-stream\package.json
+350 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\depd\package.json
+351 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\destroy\package.json
+352 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\docxtemplater\package.json
+353 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\ee-first\package.json
+354 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\error-ex\package.json
+355 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\escape-html\package.json
+356 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\escape-string-regexp\package.json
+357 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\esprima\package.json
+358 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\etag\package.json
+359 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\eventemitter2\package.json
+360 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\exit\package.json
+361 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\express\package.json
+362 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\faye-websocket\package.json
+363 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\figures\package.json
+364 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\finalhandler\package.json
+365 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\find-java-home\package.json
+366 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\find-up\package.json
+367 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\findup-sync\package.json
+368 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\forever-agent\package.json
+369 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\form-data\package.json
+370 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\forwarded\package.json
+371 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\fresh\package.json
+372 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\gaze\package.json
+373 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\get-stdin\package.json
+374 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\getobject\package.json
+375 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\glob\package.json
+376 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\globule\package.json
+377 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\graceful-fs\package.json
+378 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\grunt\package.json
+379 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\grunt-contrib-sass\package.json
+380 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\grunt-contrib-watch\package.json
+381 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\grunt-develop\package.json
+382 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\grunt-legacy-log\package.json
+383 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\grunt-legacy-log-utils\package.json
+384 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\grunt-legacy-util\package.json
+385 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\has-ansi\package.json
+386 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\hawk\package.json
+387 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\hoek\package.json
+388 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\hooker\package.json
+389 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\hosted-git-info\package.json
+390 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\http-errors\package.json
+391 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\http-signature\package.json
+392 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\iconv-lite\package.json
+393 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\indent-string\package.json
+394 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\inflight\package.json
+395 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\inherits\package.json
+396 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\ipaddr.js\package.json
+397 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\is-arrayish\package.json
+398 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\is-builtin-module\package.json
+399 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\is-finite\package.json
+400 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\is-promise\package.json
+401 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\is-utf8\package.json
+402 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\isarray\package.json
+403 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\jade\package.json
+404 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\java\package.json
+405 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\js-yaml\package.json
+406 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\json-stringify-safe\package.json
+407 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\jszip\package.json
+408 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\load-grunt-tasks\package.json
+409 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\load-json-file\package.json
+410 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\localforage\package.json
+411 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\lodash\package.json
+412 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\loud-rejection\package.json
+413 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\lru-cache\package.json
+414 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\map-obj\package.json
+415 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\media-typer\package.json
+416 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\memoizejs\package.json
+417 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\meow\package.json
+418 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\merge-descriptors\package.json
+419 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\methods\package.json
+420 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\mime\package.json
+421 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\mime-db\package.json
+422 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\mime-types\package.json
+423 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\minimatch\package.json
+424 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\minimist\package.json
+425 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\mkdirp\package.json
+426 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\morgan\package.json
+427 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\ms\package.json
+428 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\multimatch\package.json
+429 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\nan\package.json
+430 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\nedb\package.json
+431 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\negotiator\package.json
+432 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\node-uuid\package.json
+433 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\nopt\package.json
+434 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\noptify\package.json
+435 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\normalize-package-data\package.json
+436 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\number-is-nan\package.json
+437 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\oauth-sign\package.json
+438 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\object-assign\package.json
+439 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\on-finished\package.json
+440 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\once\package.json
+441 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\optimist\package.json
+442 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\pako\package.json
+443 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\parse-json\package.json
+444 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\parse-ms\package.json
+445 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\parseurl\package.json
+446 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\path-exists\package.json
+447 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\path-is-absolute\package.json
+448 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\path-to-regexp\package.json
+449 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\path-type\package.json
+450 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\pify\package.json
+451 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\pinkie\package.json
+452 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\pinkie-promise\package.json
+453 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\plur\package.json
+454 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\pretty-ms\package.json
+455 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\promise\package.json
+456 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\proxy-addr\package.json
+457 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\qs\package.json
+458 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\range-parser\package.json
+459 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\raw-body\package.json
+460 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\read-pkg\package.json
+461 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\read-pkg-up\package.json
+462 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\readable-stream\package.json
+463 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\redent\package.json
+464 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\repeating\package.json
+465 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\request\package.json
+466 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\rimraf\package.json
+467 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\semver\package.json
+468 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\send\package.json
+469 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\serve-favicon\package.json
+470 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\serve-static\package.json
+471 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\sigmund\package.json
+472 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\signal-exit\package.json
+473 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\sntp\package.json
+474 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\source-map\package.json
+475 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\spdx-correct\package.json
+476 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\spdx-exceptions\package.json
+477 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\spdx-expression-parse\package.json
+478 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\spdx-license-ids\package.json
+479 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\statuses\package.json
+480 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\string_decoder\package.json
+481 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\stringstream\package.json
+482 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\strip-ansi\package.json
+483 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\strip-bom\package.json
+484 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\strip-indent\package.json
+485 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\supports-color\package.json
+486 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\text-table\package.json
+487 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\time-grunt\package.json
+488 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\tiny-lr-fork\package.json
+489 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\tough-cookie\package.json
+490 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\transformers\package.json
+491 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\trim-newlines\package.json
+492 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\tunnel-agent\package.json
+493 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\type-is\package.json
+494 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\uglify-js\package.json
+495 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\underscore\package.json
+496 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\underscore.string\package.json
+497 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\unpipe\package.json
+498 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\utils-merge\package.json
+499 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\validate-npm-package-license\package.json
+500 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\vary\package.json
+501 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\void-elements\package.json
+502 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\which\package.json
+503 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\win-spawn\package.json
+504 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\with\package.json
+505 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\wordwrap\package.json
+506 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\wrappy\package.json
+507 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\xmldom\package.json
+508 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\xpath\package.json
+509 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\xregexp\package.json
+510 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\xslt4node\package.json
+511 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\.bin\acorn\package.json
+512 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\.bin\acorn.cmd\package.json
+513 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\.bin\cake\package.json
+514 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\.bin\cake.cmd\package.json
+515 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\.bin\coffee\package.json
+516 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\.bin\coffee.cmd\package.json
+517 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\.bin\docxtemplater\package.json
+518 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\.bin\docxtemplater.cmd\package.json
+519 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\.bin\esparse\package.json
+520 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\.bin\esparse.cmd\package.json
+521 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\.bin\esvalidate\package.json
+522 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\.bin\esvalidate.cmd\package.json
+523 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\.bin\has-ansi\package.json
+524 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\.bin\has-ansi.cmd\package.json
+525 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\.bin\jade\package.json
+526 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\.bin\jade.cmd\package.json
+527 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\.bin\js-yaml\package.json
+528 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\.bin\js-yaml.cmd\package.json
+529 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\.bin\mime\package.json
+530 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\.bin\mime.cmd\package.json
+531 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\.bin\mkdirp\package.json
+532 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\.bin\mkdirp.cmd\package.json
+533 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\.bin\nopt\package.json
+534 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\.bin\nopt.cmd\package.json
+535 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\.bin\pretty-ms\package.json
+536 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\.bin\pretty-ms.cmd\package.json
+537 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\.bin\rimraf\package.json
+538 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\.bin\rimraf.cmd\package.json
+539 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\.bin\semver\package.json
+540 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\.bin\semver.cmd\package.json
+541 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\.bin\strip-ansi\package.json
+542 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\.bin\strip-ansi.cmd\package.json
+543 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\.bin\strip-indent\package.json
+544 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\.bin\strip-indent.cmd\package.json
+545 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\.bin\supports-color\package.json
+546 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\.bin\supports-color.cmd\package.json
+547 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\.bin\tiny-lr-fork\package.json
+548 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\.bin\tiny-lr-fork.cmd\package.json
+549 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\.bin\uglifyjs\package.json
+550 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\.bin\uglifyjs.cmd\package.json
+551 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\.bin\uuid\package.json
+552 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\.bin\uuid.cmd\package.json
+553 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\.bin\which\package.json
+554 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\.bin\which.cmd\package.json
+555 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\.bin\win-spawn\package.json
+556 verbose targetResolver reading package data from C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\.bin\win-spawn.cmd\package.json
+557 verbose already installed skipping cookie-parser@~1.3.3 C:\Tom\Dropbox\Projects\WebDocumentValidator
+558 verbose already installed skipping dataurl@^0.1.0 C:\Tom\Dropbox\Projects\WebDocumentValidator
+559 verbose already installed skipping debug@~2.1.0 C:\Tom\Dropbox\Projects\WebDocumentValidator
+560 verbose already installed skipping express@~4.13.3 C:\Tom\Dropbox\Projects\WebDocumentValidator
+561 verbose already installed skipping jade@~1.8.1 C:\Tom\Dropbox\Projects\WebDocumentValidator
+562 verbose already installed skipping morgan@~1.5.0 C:\Tom\Dropbox\Projects\WebDocumentValidator
+563 verbose already installed skipping nedb@^1.1.2 C:\Tom\Dropbox\Projects\WebDocumentValidator
+564 verbose already installed skipping serve-favicon@~2.1.7 C:\Tom\Dropbox\Projects\WebDocumentValidator
+565 verbose already installed skipping xmldom@~0.1.22 C:\Tom\Dropbox\Projects\WebDocumentValidator
+566 verbose already installed skipping xpath@~0.0.22 C:\Tom\Dropbox\Projects\WebDocumentValidator
+567 verbose already installed skipping xregexp@~3.1.0 C:\Tom\Dropbox\Projects\WebDocumentValidator
+568 verbose already installed skipping docxtemplater@~2.1.0 C:\Tom\Dropbox\Projects\WebDocumentValidator
+569 verbose already installed skipping xslt4node@~0.2.1 C:\Tom\Dropbox\Projects\WebDocumentValidator
+570 verbose already installed skipping grunt@~0.4.5 C:\Tom\Dropbox\Projects\WebDocumentValidator
+571 verbose already installed skipping grunt-develop@~0.4.0 C:\Tom\Dropbox\Projects\WebDocumentValidator
+572 verbose already installed skipping grunt-contrib-sass@~0.8.1 C:\Tom\Dropbox\Projects\WebDocumentValidator
+573 verbose already installed skipping grunt-contrib-watch@~0.6.1 C:\Tom\Dropbox\Projects\WebDocumentValidator
+574 verbose already installed skipping request@~2.51.0 C:\Tom\Dropbox\Projects\WebDocumentValidator
+575 verbose already installed skipping time-grunt@~1.0.0 C:\Tom\Dropbox\Projects\WebDocumentValidator
+576 verbose already installed skipping load-grunt-tasks@~1.0.0 C:\Tom\Dropbox\Projects\WebDocumentValidator
+577 verbose already installed skipping basic-auth@^1.0.0 C:\Tom\Dropbox\Projects\WebDocumentValidator
+578 verbose already installed skipping body-parser@~1.14.1 C:\Tom\Dropbox\Projects\WebDocumentValidator
+579 silly install resolved []
+580 info build C:\Tom\Dropbox\Projects\WebDocumentValidator
+581 info linkStuff web-document-validator@0.0.1
+582 silly linkStuff web-document-validator@0.0.1 has C:\Tom\Dropbox\Projects as its parent node_modules
+583 verbose linkBins web-document-validator@0.0.1
+584 verbose linkMans web-document-validator@0.0.1
+585 verbose rebuildBundles web-document-validator@0.0.1
+586 verbose rebuildBundles [ '.bin',
+586 verbose rebuildBundles   'abbrev',
+586 verbose rebuildBundles   'accepts',
+586 verbose rebuildBundles   'acorn',
+586 verbose rebuildBundles   'acorn-globals',
+586 verbose rebuildBundles   'amdefine',
+586 verbose rebuildBundles   'ansi-regex',
+586 verbose rebuildBundles   'ansi-styles',
+586 verbose rebuildBundles   'argparse',
+586 verbose rebuildBundles   'array-differ',
+586 verbose rebuildBundles   'array-find-index',
+586 verbose rebuildBundles   'array-flatten',
+586 verbose rebuildBundles   'array-union',
+586 verbose rebuildBundles   'array-uniq',
+586 verbose rebuildBundles   'asap',
+586 verbose rebuildBundles   'asn1',
+586 verbose rebuildBundles   'assert-plus',
+586 verbose rebuildBundles   'async',
+586 verbose rebuildBundles   'aws-sign2',
+586 verbose rebuildBundles   'balanced-match',
+586 verbose rebuildBundles   'basic-auth',
+586 verbose rebuildBundles   'binary-search-tree',
+586 verbose rebuildBundles   'bl',
+586 verbose rebuildBundles   'body-parser',
+586 verbose rebuildBundles   'boom',
+586 verbose rebuildBundles   'brace-expansion',
+586 verbose rebuildBundles   'builtin-modules',
+586 verbose rebuildBundles   'bytes',
+586 verbose rebuildBundles   'camelcase',
+586 verbose rebuildBundles   'camelcase-keys',
+586 verbose rebuildBundles   'caseless',
+586 verbose rebuildBundles   'chalk',
+586 verbose rebuildBundles   'character-parser',
+586 verbose rebuildBundles   'coffee-script',
+586 verbose rebuildBundles   'colors',
+586 verbose rebuildBundles   'combined-stream',
+586 verbose rebuildBundles   'commander',
+586 verbose rebuildBundles   'concat-map',
+586 verbose rebuildBundles   'constantinople',
+586 verbose rebuildBundles   'content-disposition',
+586 verbose rebuildBundles   'content-type',
+586 verbose rebuildBundles   'cookie',
+586 verbose rebuildBundles   'cookie-parser',
+586 verbose rebuildBundles   'cookie-signature',
+586 verbose rebuildBundles   'core-util-is',
+586 verbose rebuildBundles   'crc',
+586 verbose rebuildBundles   'cryptiles',
+586 verbose rebuildBundles   'css',
+586 verbose rebuildBundles   'css-parse',
+586 verbose rebuildBundles   'css-stringify',
+586 verbose rebuildBundles   'ctype',
+586 verbose rebuildBundles   'dargs',
+586 verbose rebuildBundles   'dataurl',
+586 verbose rebuildBundles   'date-time',
+586 verbose rebuildBundles   'dateformat',
+586 verbose rebuildBundles   'debug',
+586 verbose rebuildBundles   'decamelize',
+586 verbose rebuildBundles   'delayed-stream',
+586 verbose rebuildBundles   'depd',
+586 verbose rebuildBundles   'destroy',
+586 verbose rebuildBundles   'docxtemplater',
+586 verbose rebuildBundles   'ee-first',
+586 verbose rebuildBundles   'error-ex',
+586 verbose rebuildBundles   'escape-html',
+586 verbose rebuildBundles   'escape-string-regexp',
+586 verbose rebuildBundles   'esprima',
+586 verbose rebuildBundles   'etag',
+586 verbose rebuildBundles   'eventemitter2',
+586 verbose rebuildBundles   'exit',
+586 verbose rebuildBundles   'express',
+586 verbose rebuildBundles   'faye-websocket',
+586 verbose rebuildBundles   'figures',
+586 verbose rebuildBundles   'finalhandler',
+586 verbose rebuildBundles   'find-java-home',
+586 verbose rebuildBundles   'find-up',
+586 verbose rebuildBundles   'findup-sync',
+586 verbose rebuildBundles   'forever-agent',
+586 verbose rebuildBundles   'form-data',
+586 verbose rebuildBundles   'forwarded',
+586 verbose rebuildBundles   'fresh',
+586 verbose rebuildBundles   'gaze',
+586 verbose rebuildBundles   'get-stdin',
+586 verbose rebuildBundles   'getobject',
+586 verbose rebuildBundles   'glob',
+586 verbose rebuildBundles   'globule',
+586 verbose rebuildBundles   'graceful-fs',
+586 verbose rebuildBundles   'grunt',
+586 verbose rebuildBundles   'grunt-contrib-sass',
+586 verbose rebuildBundles   'grunt-contrib-watch',
+586 verbose rebuildBundles   'grunt-develop',
+586 verbose rebuildBundles   'grunt-legacy-log',
+586 verbose rebuildBundles   'grunt-legacy-log-utils',
+586 verbose rebuildBundles   'grunt-legacy-util',
+586 verbose rebuildBundles   'has-ansi',
+586 verbose rebuildBundles   'hawk',
+586 verbose rebuildBundles   'hoek',
+586 verbose rebuildBundles   'hooker',
+586 verbose rebuildBundles   'hosted-git-info',
+586 verbose rebuildBundles   'http-errors',
+586 verbose rebuildBundles   'http-signature',
+586 verbose rebuildBundles   'iconv-lite',
+586 verbose rebuildBundles   'indent-string',
+586 verbose rebuildBundles   'inflight',
+586 verbose rebuildBundles   'inherits',
+586 verbose rebuildBundles   'ipaddr.js',
+586 verbose rebuildBundles   'is-arrayish',
+586 verbose rebuildBundles   'is-builtin-module',
+586 verbose rebuildBundles   'is-finite',
+586 verbose rebuildBundles   'is-promise',
+586 verbose rebuildBundles   'is-utf8',
+586 verbose rebuildBundles   'isarray',
+586 verbose rebuildBundles   'jade',
+586 verbose rebuildBundles   'java',
+586 verbose rebuildBundles   'js-yaml',
+586 verbose rebuildBundles   'json-stringify-safe',
+586 verbose rebuildBundles   'jszip',
+586 verbose rebuildBundles   'load-grunt-tasks',
+586 verbose rebuildBundles   'load-json-file',
+586 verbose rebuildBundles   'localforage',
+586 verbose rebuildBundles   'lodash',
+586 verbose rebuildBundles   'loud-rejection',
+586 verbose rebuildBundles   'lru-cache',
+586 verbose rebuildBundles   'map-obj',
+586 verbose rebuildBundles   'media-typer',
+586 verbose rebuildBundles   'memoizejs',
+586 verbose rebuildBundles   'meow',
+586 verbose rebuildBundles   'merge-descriptors',
+586 verbose rebuildBundles   'methods',
+586 verbose rebuildBundles   'mime',
+586 verbose rebuildBundles   'mime-db',
+586 verbose rebuildBundles   'mime-types',
+586 verbose rebuildBundles   'minimatch',
+586 verbose rebuildBundles   'minimist',
+586 verbose rebuildBundles   'mkdirp',
+586 verbose rebuildBundles   'morgan',
+586 verbose rebuildBundles   'ms',
+586 verbose rebuildBundles   'multimatch',
+586 verbose rebuildBundles   'nan',
+586 verbose rebuildBundles   'nedb',
+586 verbose rebuildBundles   'negotiator',
+586 verbose rebuildBundles   'node-uuid',
+586 verbose rebuildBundles   'nopt',
+586 verbose rebuildBundles   'noptify',
+586 verbose rebuildBundles   'normalize-package-data',
+586 verbose rebuildBundles   'number-is-nan',
+586 verbose rebuildBundles   'oauth-sign',
+586 verbose rebuildBundles   'object-assign',
+586 verbose rebuildBundles   'on-finished',
+586 verbose rebuildBundles   'once',
+586 verbose rebuildBundles   'optimist',
+586 verbose rebuildBundles   'pako',
+586 verbose rebuildBundles   'parse-json',
+586 verbose rebuildBundles   'parse-ms',
+586 verbose rebuildBundles   'parseurl',
+586 verbose rebuildBundles   'path-exists',
+586 verbose rebuildBundles   'path-is-absolute',
+586 verbose rebuildBundles   'path-to-regexp',
+586 verbose rebuildBundles   'path-type',
+586 verbose rebuildBundles   'pify',
+586 verbose rebuildBundles   'pinkie',
+586 verbose rebuildBundles   'pinkie-promise',
+586 verbose rebuildBundles   'plur',
+586 verbose rebuildBundles   'pretty-ms',
+586 verbose rebuildBundles   'promise',
+586 verbose rebuildBundles   'proxy-addr',
+586 verbose rebuildBundles   'qs',
+586 verbose rebuildBundles   'range-parser',
+586 verbose rebuildBundles   'raw-body',
+586 verbose rebuildBundles   'read-pkg',
+586 verbose rebuildBundles   'read-pkg-up',
+586 verbose rebuildBundles   'readable-stream',
+586 verbose rebuildBundles   'redent',
+586 verbose rebuildBundles   'repeating',
+586 verbose rebuildBundles   'request',
+586 verbose rebuildBundles   'rimraf',
+586 verbose rebuildBundles   'semver',
+586 verbose rebuildBundles   'send',
+586 verbose rebuildBundles   'serve-favicon',
+586 verbose rebuildBundles   'serve-static',
+586 verbose rebuildBundles   'sigmund',
+586 verbose rebuildBundles   'signal-exit',
+586 verbose rebuildBundles   'sntp',
+586 verbose rebuildBundles   'source-map',
+586 verbose rebuildBundles   'spdx-correct',
+586 verbose rebuildBundles   'spdx-exceptions',
+586 verbose rebuildBundles   'spdx-expression-parse',
+586 verbose rebuildBundles   'spdx-license-ids',
+586 verbose rebuildBundles   'statuses',
+586 verbose rebuildBundles   'string_decoder',
+586 verbose rebuildBundles   'stringstream',
+586 verbose rebuildBundles   'strip-ansi',
+586 verbose rebuildBundles   'strip-bom',
+586 verbose rebuildBundles   'strip-indent',
+586 verbose rebuildBundles   'supports-color',
+586 verbose rebuildBundles   'text-table',
+586 verbose rebuildBundles   'time-grunt',
+586 verbose rebuildBundles   'tiny-lr-fork',
+586 verbose rebuildBundles   'tough-cookie',
+586 verbose rebuildBundles   'transformers',
+586 verbose rebuildBundles   'trim-newlines',
+586 verbose rebuildBundles   'tunnel-agent',
+586 verbose rebuildBundles   'type-is',
+586 verbose rebuildBundles   'uglify-js',
+586 verbose rebuildBundles   'underscore',
+586 verbose rebuildBundles   'underscore.string',
+586 verbose rebuildBundles   'unpipe',
+586 verbose rebuildBundles   'utils-merge',
+586 verbose rebuildBundles   'validate-npm-package-license',
+586 verbose rebuildBundles   'vary',
+586 verbose rebuildBundles   'void-elements',
+586 verbose rebuildBundles   'which',
+586 verbose rebuildBundles   'win-spawn',
+586 verbose rebuildBundles   'with',
+586 verbose rebuildBundles   'wordwrap',
+586 verbose rebuildBundles   'wrappy',
+586 verbose rebuildBundles   'xmldom',
+586 verbose rebuildBundles   'xpath',
+586 verbose rebuildBundles   'xregexp',
+586 verbose rebuildBundles   'xslt4node' ]
+587 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\abbrev
+588 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\abbrev
+589 info preinstall abbrev@1.0.7
+590 info linkStuff abbrev@1.0.7
+591 silly linkStuff abbrev@1.0.7 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+592 verbose linkBins abbrev@1.0.7
+593 verbose linkMans abbrev@1.0.7
+594 verbose rebuildBundles abbrev@1.0.7
+595 info install abbrev@1.0.7
+596 info postinstall abbrev@1.0.7
+597 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\accepts
+598 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\accepts
+599 info preinstall accepts@1.2.13
+600 info linkStuff accepts@1.2.13
+601 silly linkStuff accepts@1.2.13 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+602 verbose linkBins accepts@1.2.13
+603 verbose linkMans accepts@1.2.13
+604 verbose rebuildBundles accepts@1.2.13
+605 info install accepts@1.2.13
+606 info postinstall accepts@1.2.13
+607 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\acorn
+608 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\acorn
+609 info preinstall acorn@2.7.0
+610 info linkStuff acorn@2.7.0
+611 silly linkStuff acorn@2.7.0 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+612 verbose linkBins acorn@2.7.0
+613 verbose link bins [ { acorn: './bin/acorn' },
+613 verbose link bins   'C:\\Tom\\Dropbox\\Projects\\WebDocumentValidator\\node_modules\\.bin',
+613 verbose link bins   false ]
+614 verbose linkMans acorn@2.7.0
+615 verbose rebuildBundles acorn@2.7.0
+616 info install acorn@2.7.0
+617 info postinstall acorn@2.7.0
+618 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\acorn-globals
+619 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\acorn-globals
+620 info preinstall acorn-globals@1.0.9
+621 info linkStuff acorn-globals@1.0.9
+622 silly linkStuff acorn-globals@1.0.9 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+623 verbose linkBins acorn-globals@1.0.9
+624 verbose linkMans acorn-globals@1.0.9
+625 verbose rebuildBundles acorn-globals@1.0.9
+626 info install acorn-globals@1.0.9
+627 info postinstall acorn-globals@1.0.9
+628 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\amdefine
+629 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\amdefine
+630 info preinstall amdefine@1.0.0
+631 info linkStuff amdefine@1.0.0
+632 silly linkStuff amdefine@1.0.0 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+633 verbose linkBins amdefine@1.0.0
+634 verbose linkMans amdefine@1.0.0
+635 verbose rebuildBundles amdefine@1.0.0
+636 info install amdefine@1.0.0
+637 info postinstall amdefine@1.0.0
+638 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\ansi-regex
+639 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\ansi-regex
+640 info preinstall ansi-regex@0.2.1
+641 info linkStuff ansi-regex@0.2.1
+642 silly linkStuff ansi-regex@0.2.1 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+643 verbose linkBins ansi-regex@0.2.1
+644 verbose linkMans ansi-regex@0.2.1
+645 verbose rebuildBundles ansi-regex@0.2.1
+646 info install ansi-regex@0.2.1
+647 info postinstall ansi-regex@0.2.1
+648 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\ansi-styles
+649 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\ansi-styles
+650 info preinstall ansi-styles@1.1.0
+651 info linkStuff ansi-styles@1.1.0
+652 silly linkStuff ansi-styles@1.1.0 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+653 verbose linkBins ansi-styles@1.1.0
+654 verbose linkMans ansi-styles@1.1.0
+655 verbose rebuildBundles ansi-styles@1.1.0
+656 info install ansi-styles@1.1.0
+657 info postinstall ansi-styles@1.1.0
+658 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\argparse
+659 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\argparse
+660 info preinstall argparse@0.1.16
+661 info linkStuff argparse@0.1.16
+662 silly linkStuff argparse@0.1.16 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+663 verbose linkBins argparse@0.1.16
+664 verbose linkMans argparse@0.1.16
+665 verbose rebuildBundles argparse@0.1.16
+666 verbose rebuildBundles [ 'underscore', 'underscore.string' ]
+667 info install argparse@0.1.16
+668 info postinstall argparse@0.1.16
+669 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\array-differ
+670 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\array-differ
+671 info preinstall array-differ@1.0.0
+672 info linkStuff array-differ@1.0.0
+673 silly linkStuff array-differ@1.0.0 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+674 verbose linkBins array-differ@1.0.0
+675 verbose linkMans array-differ@1.0.0
+676 verbose rebuildBundles array-differ@1.0.0
+677 info install array-differ@1.0.0
+678 info postinstall array-differ@1.0.0
+679 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\array-find-index
+680 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\array-find-index
+681 info preinstall array-find-index@1.0.1
+682 info linkStuff array-find-index@1.0.1
+683 silly linkStuff array-find-index@1.0.1 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+684 verbose linkBins array-find-index@1.0.1
+685 verbose linkMans array-find-index@1.0.1
+686 verbose rebuildBundles array-find-index@1.0.1
+687 info install array-find-index@1.0.1
+688 info postinstall array-find-index@1.0.1
+689 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\array-flatten
+690 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\array-flatten
+691 info preinstall array-flatten@1.1.1
+692 info linkStuff array-flatten@1.1.1
+693 silly linkStuff array-flatten@1.1.1 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+694 verbose linkBins array-flatten@1.1.1
+695 verbose linkMans array-flatten@1.1.1
+696 verbose rebuildBundles array-flatten@1.1.1
+697 info install array-flatten@1.1.1
+698 info postinstall array-flatten@1.1.1
+699 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\array-union
+700 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\array-union
+701 info preinstall array-union@1.0.1
+702 info linkStuff array-union@1.0.1
+703 silly linkStuff array-union@1.0.1 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+704 verbose linkBins array-union@1.0.1
+705 verbose linkMans array-union@1.0.1
+706 verbose rebuildBundles array-union@1.0.1
+707 info install array-union@1.0.1
+708 info postinstall array-union@1.0.1
+709 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\array-uniq
+710 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\array-uniq
+711 info preinstall array-uniq@1.0.2
+712 info linkStuff array-uniq@1.0.2
+713 silly linkStuff array-uniq@1.0.2 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+714 verbose linkBins array-uniq@1.0.2
+715 verbose linkMans array-uniq@1.0.2
+716 verbose rebuildBundles array-uniq@1.0.2
+717 info install array-uniq@1.0.2
+718 info postinstall array-uniq@1.0.2
+719 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\asap
+720 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\asap
+721 info preinstall asap@1.0.0
+722 info linkStuff asap@1.0.0
+723 silly linkStuff asap@1.0.0 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+724 verbose linkBins asap@1.0.0
+725 verbose linkMans asap@1.0.0
+726 verbose rebuildBundles asap@1.0.0
+727 info install asap@1.0.0
+728 info postinstall asap@1.0.0
+729 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\asn1
+730 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\asn1
+731 info preinstall asn1@0.1.11
+732 info linkStuff asn1@0.1.11
+733 silly linkStuff asn1@0.1.11 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+734 verbose linkBins asn1@0.1.11
+735 verbose linkMans asn1@0.1.11
+736 verbose rebuildBundles asn1@0.1.11
+737 info install asn1@0.1.11
+738 info postinstall asn1@0.1.11
+739 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\assert-plus
+740 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\assert-plus
+741 info preinstall assert-plus@0.1.5
+742 info linkStuff assert-plus@0.1.5
+743 silly linkStuff assert-plus@0.1.5 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+744 verbose linkBins assert-plus@0.1.5
+745 verbose linkMans assert-plus@0.1.5
+746 verbose rebuildBundles assert-plus@0.1.5
+747 info install assert-plus@0.1.5
+748 info postinstall assert-plus@0.1.5
+749 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\async
+750 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\async
+751 info preinstall async@0.2.10
+752 info linkStuff async@0.2.10
+753 silly linkStuff async@0.2.10 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+754 verbose linkBins async@0.2.10
+755 verbose linkMans async@0.2.10
+756 verbose rebuildBundles async@0.2.10
+757 info install async@0.2.10
+758 info postinstall async@0.2.10
+759 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\aws-sign2
+760 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\aws-sign2
+761 info preinstall aws-sign2@0.5.0
+762 info linkStuff aws-sign2@0.5.0
+763 silly linkStuff aws-sign2@0.5.0 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+764 verbose linkBins aws-sign2@0.5.0
+765 verbose linkMans aws-sign2@0.5.0
+766 verbose rebuildBundles aws-sign2@0.5.0
+767 info install aws-sign2@0.5.0
+768 info postinstall aws-sign2@0.5.0
+769 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\balanced-match
+770 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\balanced-match
+771 info preinstall balanced-match@0.3.0
+772 info linkStuff balanced-match@0.3.0
+773 silly linkStuff balanced-match@0.3.0 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+774 verbose linkBins balanced-match@0.3.0
+775 verbose linkMans balanced-match@0.3.0
+776 verbose rebuildBundles balanced-match@0.3.0
+777 info install balanced-match@0.3.0
+778 info postinstall balanced-match@0.3.0
+779 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\binary-search-tree
+780 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\binary-search-tree
+781 info preinstall binary-search-tree@0.2.5
+782 info linkStuff binary-search-tree@0.2.5
+783 silly linkStuff binary-search-tree@0.2.5 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+784 verbose linkBins binary-search-tree@0.2.5
+785 verbose linkMans binary-search-tree@0.2.5
+786 verbose rebuildBundles binary-search-tree@0.2.5
+787 info install binary-search-tree@0.2.5
+788 info postinstall binary-search-tree@0.2.5
+789 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\bl
+790 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\bl
+791 info preinstall bl@0.9.5
+792 info linkStuff bl@0.9.5
+793 silly linkStuff bl@0.9.5 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+794 verbose linkBins bl@0.9.5
+795 verbose linkMans bl@0.9.5
+796 verbose rebuildBundles bl@0.9.5
+797 info install bl@0.9.5
+798 info postinstall bl@0.9.5
+799 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\boom
+800 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\boom
+801 info preinstall boom@0.4.2
+802 info linkStuff boom@0.4.2
+803 silly linkStuff boom@0.4.2 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+804 verbose linkBins boom@0.4.2
+805 verbose linkMans boom@0.4.2
+806 verbose rebuildBundles boom@0.4.2
+807 info install boom@0.4.2
+808 info postinstall boom@0.4.2
+809 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\brace-expansion
+810 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\brace-expansion
+811 info preinstall brace-expansion@1.1.3
+812 info linkStuff brace-expansion@1.1.3
+813 silly linkStuff brace-expansion@1.1.3 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+814 verbose linkBins brace-expansion@1.1.3
+815 verbose linkMans brace-expansion@1.1.3
+816 verbose rebuildBundles brace-expansion@1.1.3
+817 info install brace-expansion@1.1.3
+818 info postinstall brace-expansion@1.1.3
+819 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\builtin-modules
+820 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\builtin-modules
+821 info preinstall builtin-modules@1.1.1
+822 info linkStuff builtin-modules@1.1.1
+823 silly linkStuff builtin-modules@1.1.1 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+824 verbose linkBins builtin-modules@1.1.1
+825 verbose linkMans builtin-modules@1.1.1
+826 verbose rebuildBundles builtin-modules@1.1.1
+827 info install builtin-modules@1.1.1
+828 info postinstall builtin-modules@1.1.1
+829 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\bytes
+830 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\bytes
+831 info preinstall bytes@2.2.0
+832 info linkStuff bytes@2.2.0
+833 silly linkStuff bytes@2.2.0 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+834 verbose linkBins bytes@2.2.0
+835 verbose linkMans bytes@2.2.0
+836 verbose rebuildBundles bytes@2.2.0
+837 info install bytes@2.2.0
+838 info postinstall bytes@2.2.0
+839 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\camelcase
+840 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\camelcase
+841 info preinstall camelcase@2.1.1
+842 info linkStuff camelcase@2.1.1
+843 silly linkStuff camelcase@2.1.1 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+844 verbose linkBins camelcase@2.1.1
+845 verbose linkMans camelcase@2.1.1
+846 verbose rebuildBundles camelcase@2.1.1
+847 info install camelcase@2.1.1
+848 info postinstall camelcase@2.1.1
+849 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\camelcase-keys
+850 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\camelcase-keys
+851 info preinstall camelcase-keys@2.1.0
+852 info linkStuff camelcase-keys@2.1.0
+853 silly linkStuff camelcase-keys@2.1.0 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+854 verbose linkBins camelcase-keys@2.1.0
+855 verbose linkMans camelcase-keys@2.1.0
+856 verbose rebuildBundles camelcase-keys@2.1.0
+857 info install camelcase-keys@2.1.0
+858 info postinstall camelcase-keys@2.1.0
+859 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\caseless
+860 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\caseless
+861 info preinstall caseless@0.8.0
+862 info linkStuff caseless@0.8.0
+863 silly linkStuff caseless@0.8.0 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+864 verbose linkBins caseless@0.8.0
+865 verbose linkMans caseless@0.8.0
+866 verbose rebuildBundles caseless@0.8.0
+867 info install caseless@0.8.0
+868 info postinstall caseless@0.8.0
+869 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\chalk
+870 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\chalk
+871 info preinstall chalk@0.5.1
+872 info linkStuff chalk@0.5.1
+873 silly linkStuff chalk@0.5.1 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+874 verbose linkBins chalk@0.5.1
+875 verbose linkMans chalk@0.5.1
+876 verbose rebuildBundles chalk@0.5.1
+877 info install chalk@0.5.1
+878 info postinstall chalk@0.5.1
+879 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\character-parser
+880 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\character-parser
+881 info preinstall character-parser@1.2.1
+882 info linkStuff character-parser@1.2.1
+883 silly linkStuff character-parser@1.2.1 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+884 verbose linkBins character-parser@1.2.1
+885 verbose linkMans character-parser@1.2.1
+886 verbose rebuildBundles character-parser@1.2.1
+887 info install character-parser@1.2.1
+888 info postinstall character-parser@1.2.1
+889 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\coffee-script
+890 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\coffee-script
+891 info preinstall coffee-script@1.3.3
+892 info linkStuff coffee-script@1.3.3
+893 silly linkStuff coffee-script@1.3.3 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+894 verbose linkBins coffee-script@1.3.3
+895 verbose link bins [ { cake: './bin/cake', coffee: './bin/coffee' },
+895 verbose link bins   'C:\\Tom\\Dropbox\\Projects\\WebDocumentValidator\\node_modules\\.bin',
+895 verbose link bins   false ]
+896 verbose linkMans coffee-script@1.3.3
+897 verbose rebuildBundles coffee-script@1.3.3
+898 info install coffee-script@1.3.3
+899 info postinstall coffee-script@1.3.3
+900 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\colors
+901 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\colors
+902 info preinstall colors@0.6.2
+903 info linkStuff colors@0.6.2
+904 silly linkStuff colors@0.6.2 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+905 verbose linkBins colors@0.6.2
+906 verbose linkMans colors@0.6.2
+907 verbose rebuildBundles colors@0.6.2
+908 info install colors@0.6.2
+909 info postinstall colors@0.6.2
+910 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\combined-stream
+911 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\combined-stream
+912 info preinstall combined-stream@0.0.7
+913 info linkStuff combined-stream@0.0.7
+914 silly linkStuff combined-stream@0.0.7 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+915 verbose linkBins combined-stream@0.0.7
+916 verbose linkMans combined-stream@0.0.7
+917 verbose rebuildBundles combined-stream@0.0.7
+918 info install combined-stream@0.0.7
+919 info postinstall combined-stream@0.0.7
+920 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\commander
+921 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\commander
+922 info preinstall commander@2.5.1
+923 info linkStuff commander@2.5.1
+924 silly linkStuff commander@2.5.1 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+925 verbose linkBins commander@2.5.1
+926 verbose linkMans commander@2.5.1
+927 verbose rebuildBundles commander@2.5.1
+928 info install commander@2.5.1
+929 info postinstall commander@2.5.1
+930 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\concat-map
+931 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\concat-map
+932 info preinstall concat-map@0.0.1
+933 info linkStuff concat-map@0.0.1
+934 silly linkStuff concat-map@0.0.1 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+935 verbose linkBins concat-map@0.0.1
+936 verbose linkMans concat-map@0.0.1
+937 verbose rebuildBundles concat-map@0.0.1
+938 info install concat-map@0.0.1
+939 info postinstall concat-map@0.0.1
+940 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\constantinople
+941 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\constantinople
+942 info preinstall constantinople@3.0.2
+943 info linkStuff constantinople@3.0.2
+944 silly linkStuff constantinople@3.0.2 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+945 verbose linkBins constantinople@3.0.2
+946 verbose linkMans constantinople@3.0.2
+947 verbose rebuildBundles constantinople@3.0.2
+948 info install constantinople@3.0.2
+949 info postinstall constantinople@3.0.2
+950 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\content-disposition
+951 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\content-disposition
+952 info preinstall content-disposition@0.5.1
+953 info linkStuff content-disposition@0.5.1
+954 silly linkStuff content-disposition@0.5.1 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+955 verbose linkBins content-disposition@0.5.1
+956 verbose linkMans content-disposition@0.5.1
+957 verbose rebuildBundles content-disposition@0.5.1
+958 info install content-disposition@0.5.1
+959 info postinstall content-disposition@0.5.1
+960 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\content-type
+961 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\content-type
+962 info preinstall content-type@1.0.1
+963 info linkStuff content-type@1.0.1
+964 silly linkStuff content-type@1.0.1 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+965 verbose linkBins content-type@1.0.1
+966 verbose linkMans content-type@1.0.1
+967 verbose rebuildBundles content-type@1.0.1
+968 info install content-type@1.0.1
+969 info postinstall content-type@1.0.1
+970 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\cookie
+971 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\cookie
+972 info preinstall cookie@0.1.3
+973 info linkStuff cookie@0.1.3
+974 silly linkStuff cookie@0.1.3 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+975 verbose linkBins cookie@0.1.3
+976 verbose linkMans cookie@0.1.3
+977 verbose rebuildBundles cookie@0.1.3
+978 info install cookie@0.1.3
+979 info postinstall cookie@0.1.3
+980 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\cookie-signature
+981 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\cookie-signature
+982 info preinstall cookie-signature@1.0.6
+983 info linkStuff cookie-signature@1.0.6
+984 silly linkStuff cookie-signature@1.0.6 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+985 verbose linkBins cookie-signature@1.0.6
+986 verbose linkMans cookie-signature@1.0.6
+987 verbose rebuildBundles cookie-signature@1.0.6
+988 info install cookie-signature@1.0.6
+989 info postinstall cookie-signature@1.0.6
+990 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\core-util-is
+991 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\core-util-is
+992 info preinstall core-util-is@1.0.2
+993 info linkStuff core-util-is@1.0.2
+994 silly linkStuff core-util-is@1.0.2 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+995 verbose linkBins core-util-is@1.0.2
+996 verbose linkMans core-util-is@1.0.2
+997 verbose rebuildBundles core-util-is@1.0.2
+998 info install core-util-is@1.0.2
+999 info postinstall core-util-is@1.0.2
+1000 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\crc
+1001 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\crc
+1002 info preinstall crc@3.2.1
+1003 info linkStuff crc@3.2.1
+1004 silly linkStuff crc@3.2.1 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1005 verbose linkBins crc@3.2.1
+1006 verbose linkMans crc@3.2.1
+1007 verbose rebuildBundles crc@3.2.1
+1008 info install crc@3.2.1
+1009 info postinstall crc@3.2.1
+1010 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\cryptiles
+1011 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\cryptiles
+1012 info preinstall cryptiles@0.2.2
+1013 info linkStuff cryptiles@0.2.2
+1014 silly linkStuff cryptiles@0.2.2 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1015 verbose linkBins cryptiles@0.2.2
+1016 verbose linkMans cryptiles@0.2.2
+1017 verbose rebuildBundles cryptiles@0.2.2
+1018 info install cryptiles@0.2.2
+1019 info postinstall cryptiles@0.2.2
+1020 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\css
+1021 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\css
+1022 info preinstall css@1.0.8
+1023 info linkStuff css@1.0.8
+1024 silly linkStuff css@1.0.8 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1025 verbose linkBins css@1.0.8
+1026 verbose linkMans css@1.0.8
+1027 verbose rebuildBundles css@1.0.8
+1028 info install css@1.0.8
+1029 info postinstall css@1.0.8
+1030 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\css-parse
+1031 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\css-parse
+1032 info preinstall css-parse@1.0.4
+1033 info linkStuff css-parse@1.0.4
+1034 silly linkStuff css-parse@1.0.4 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1035 verbose linkBins css-parse@1.0.4
+1036 verbose linkMans css-parse@1.0.4
+1037 verbose rebuildBundles css-parse@1.0.4
+1038 info install css-parse@1.0.4
+1039 info postinstall css-parse@1.0.4
+1040 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\css-stringify
+1041 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\css-stringify
+1042 info preinstall css-stringify@1.0.5
+1043 info linkStuff css-stringify@1.0.5
+1044 silly linkStuff css-stringify@1.0.5 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1045 verbose linkBins css-stringify@1.0.5
+1046 verbose linkMans css-stringify@1.0.5
+1047 verbose rebuildBundles css-stringify@1.0.5
+1048 info install css-stringify@1.0.5
+1049 info postinstall css-stringify@1.0.5
+1050 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\ctype
+1051 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\ctype
+1052 info preinstall ctype@0.5.3
+1053 info linkStuff ctype@0.5.3
+1054 silly linkStuff ctype@0.5.3 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1055 verbose linkBins ctype@0.5.3
+1056 verbose linkMans ctype@0.5.3
+1057 verbose rebuildBundles ctype@0.5.3
+1058 info install ctype@0.5.3
+1059 info postinstall ctype@0.5.3
+1060 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\dargs
+1061 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\dargs
+1062 info preinstall dargs@2.1.0
+1063 info linkStuff dargs@2.1.0
+1064 silly linkStuff dargs@2.1.0 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1065 verbose linkBins dargs@2.1.0
+1066 verbose linkMans dargs@2.1.0
+1067 verbose rebuildBundles dargs@2.1.0
+1068 info install dargs@2.1.0
+1069 info postinstall dargs@2.1.0
+1070 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\date-time
+1071 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\date-time
+1072 info preinstall date-time@1.0.0
+1073 info linkStuff date-time@1.0.0
+1074 silly linkStuff date-time@1.0.0 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1075 verbose linkBins date-time@1.0.0
+1076 verbose linkMans date-time@1.0.0
+1077 verbose rebuildBundles date-time@1.0.0
+1078 info install date-time@1.0.0
+1079 info postinstall date-time@1.0.0
+1080 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\dateformat
+1081 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\dateformat
+1082 info preinstall dateformat@1.0.2-1.2.3
+1083 info linkStuff dateformat@1.0.2-1.2.3
+1084 silly linkStuff dateformat@1.0.2-1.2.3 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1085 verbose linkBins dateformat@1.0.2-1.2.3
+1086 verbose linkMans dateformat@1.0.2-1.2.3
+1087 verbose rebuildBundles dateformat@1.0.2-1.2.3
+1088 info install dateformat@1.0.2-1.2.3
+1089 info postinstall dateformat@1.0.2-1.2.3
+1090 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\decamelize
+1091 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\decamelize
+1092 info preinstall decamelize@1.2.0
+1093 info linkStuff decamelize@1.2.0
+1094 silly linkStuff decamelize@1.2.0 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1095 verbose linkBins decamelize@1.2.0
+1096 verbose linkMans decamelize@1.2.0
+1097 verbose rebuildBundles decamelize@1.2.0
+1098 info install decamelize@1.2.0
+1099 info postinstall decamelize@1.2.0
+1100 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\delayed-stream
+1101 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\delayed-stream
+1102 info preinstall delayed-stream@0.0.5
+1103 info linkStuff delayed-stream@0.0.5
+1104 silly linkStuff delayed-stream@0.0.5 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1105 verbose linkBins delayed-stream@0.0.5
+1106 verbose linkMans delayed-stream@0.0.5
+1107 verbose rebuildBundles delayed-stream@0.0.5
+1108 info install delayed-stream@0.0.5
+1109 info postinstall delayed-stream@0.0.5
+1110 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\depd
+1111 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\depd
+1112 info preinstall depd@1.1.0
+1113 info linkStuff depd@1.1.0
+1114 silly linkStuff depd@1.1.0 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1115 verbose linkBins depd@1.1.0
+1116 verbose linkMans depd@1.1.0
+1117 verbose rebuildBundles depd@1.1.0
+1118 info install depd@1.1.0
+1119 info postinstall depd@1.1.0
+1120 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\destroy
+1121 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\destroy
+1122 info preinstall destroy@1.0.4
+1123 info linkStuff destroy@1.0.4
+1124 silly linkStuff destroy@1.0.4 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1125 verbose linkBins destroy@1.0.4
+1126 verbose linkMans destroy@1.0.4
+1127 verbose rebuildBundles destroy@1.0.4
+1128 info install destroy@1.0.4
+1129 info postinstall destroy@1.0.4
+1130 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\ee-first
+1131 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\ee-first
+1132 info preinstall ee-first@1.1.1
+1133 info linkStuff ee-first@1.1.1
+1134 silly linkStuff ee-first@1.1.1 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1135 verbose linkBins ee-first@1.1.1
+1136 verbose linkMans ee-first@1.1.1
+1137 verbose rebuildBundles ee-first@1.1.1
+1138 info install ee-first@1.1.1
+1139 info postinstall ee-first@1.1.1
+1140 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\error-ex
+1141 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\error-ex
+1142 info preinstall error-ex@1.3.0
+1143 info linkStuff error-ex@1.3.0
+1144 silly linkStuff error-ex@1.3.0 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1145 verbose linkBins error-ex@1.3.0
+1146 verbose linkMans error-ex@1.3.0
+1147 verbose rebuildBundles error-ex@1.3.0
+1148 info install error-ex@1.3.0
+1149 info postinstall error-ex@1.3.0
+1150 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\escape-html
+1151 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\escape-html
+1152 info preinstall escape-html@1.0.3
+1153 info linkStuff escape-html@1.0.3
+1154 silly linkStuff escape-html@1.0.3 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1155 verbose linkBins escape-html@1.0.3
+1156 verbose linkMans escape-html@1.0.3
+1157 verbose rebuildBundles escape-html@1.0.3
+1158 info install escape-html@1.0.3
+1159 info postinstall escape-html@1.0.3
+1160 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\escape-string-regexp
+1161 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\escape-string-regexp
+1162 info preinstall escape-string-regexp@1.0.5
+1163 info linkStuff escape-string-regexp@1.0.5
+1164 silly linkStuff escape-string-regexp@1.0.5 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1165 verbose linkBins escape-string-regexp@1.0.5
+1166 verbose linkMans escape-string-regexp@1.0.5
+1167 verbose rebuildBundles escape-string-regexp@1.0.5
+1168 info install escape-string-regexp@1.0.5
+1169 info postinstall escape-string-regexp@1.0.5
+1170 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\esprima
+1171 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\esprima
+1172 info preinstall esprima@1.0.4
+1173 info linkStuff esprima@1.0.4
+1174 silly linkStuff esprima@1.0.4 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1175 verbose linkBins esprima@1.0.4
+1176 verbose link bins [ { esparse: './bin/esparse.js',
+1176 verbose link bins     esvalidate: './bin/esvalidate.js' },
+1176 verbose link bins   'C:\\Tom\\Dropbox\\Projects\\WebDocumentValidator\\node_modules\\.bin',
+1176 verbose link bins   false ]
+1177 verbose linkMans esprima@1.0.4
+1178 verbose rebuildBundles esprima@1.0.4
+1179 info install esprima@1.0.4
+1180 info postinstall esprima@1.0.4
+1181 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\etag
+1182 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\etag
+1183 info preinstall etag@1.7.0
+1184 info linkStuff etag@1.7.0
+1185 silly linkStuff etag@1.7.0 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1186 verbose linkBins etag@1.7.0
+1187 verbose linkMans etag@1.7.0
+1188 verbose rebuildBundles etag@1.7.0
+1189 info install etag@1.7.0
+1190 info postinstall etag@1.7.0
+1191 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\eventemitter2
+1192 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\eventemitter2
+1193 info preinstall eventemitter2@0.4.14
+1194 info linkStuff eventemitter2@0.4.14
+1195 silly linkStuff eventemitter2@0.4.14 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1196 verbose linkBins eventemitter2@0.4.14
+1197 verbose linkMans eventemitter2@0.4.14
+1198 verbose rebuildBundles eventemitter2@0.4.14
+1199 info install eventemitter2@0.4.14
+1200 info postinstall eventemitter2@0.4.14
+1201 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\exit
+1202 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\exit
+1203 info preinstall exit@0.1.2
+1204 info linkStuff exit@0.1.2
+1205 silly linkStuff exit@0.1.2 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1206 verbose linkBins exit@0.1.2
+1207 verbose linkMans exit@0.1.2
+1208 verbose rebuildBundles exit@0.1.2
+1209 info install exit@0.1.2
+1210 info postinstall exit@0.1.2
+1211 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\faye-websocket
+1212 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\faye-websocket
+1213 info preinstall faye-websocket@0.4.4
+1214 info linkStuff faye-websocket@0.4.4
+1215 silly linkStuff faye-websocket@0.4.4 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1216 verbose linkBins faye-websocket@0.4.4
+1217 verbose linkMans faye-websocket@0.4.4
+1218 verbose rebuildBundles faye-websocket@0.4.4
+1219 info install faye-websocket@0.4.4
+1220 info postinstall faye-websocket@0.4.4
+1221 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\figures
+1222 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\figures
+1223 info preinstall figures@1.5.0
+1224 info linkStuff figures@1.5.0
+1225 silly linkStuff figures@1.5.0 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1226 verbose linkBins figures@1.5.0
+1227 verbose linkMans figures@1.5.0
+1228 verbose rebuildBundles figures@1.5.0
+1229 info install figures@1.5.0
+1230 info postinstall figures@1.5.0
+1231 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\finalhandler
+1232 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\finalhandler
+1233 info preinstall finalhandler@0.4.1
+1234 info linkStuff finalhandler@0.4.1
+1235 silly linkStuff finalhandler@0.4.1 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1236 verbose linkBins finalhandler@0.4.1
+1237 verbose linkMans finalhandler@0.4.1
+1238 verbose rebuildBundles finalhandler@0.4.1
+1239 verbose rebuildBundles [ 'debug' ]
+1240 info install finalhandler@0.4.1
+1241 info postinstall finalhandler@0.4.1
+1242 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\find-java-home
+1243 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\find-java-home
+1244 info preinstall find-java-home@0.1.2
+1245 info linkStuff find-java-home@0.1.2
+1246 silly linkStuff find-java-home@0.1.2 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1247 verbose linkBins find-java-home@0.1.2
+1248 verbose linkMans find-java-home@0.1.2
+1249 verbose rebuildBundles find-java-home@0.1.2
+1250 info install find-java-home@0.1.2
+1251 info postinstall find-java-home@0.1.2
+1252 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\find-up
+1253 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\find-up
+1254 info preinstall find-up@1.1.2
+1255 info linkStuff find-up@1.1.2
+1256 silly linkStuff find-up@1.1.2 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1257 verbose linkBins find-up@1.1.2
+1258 verbose linkMans find-up@1.1.2
+1259 verbose rebuildBundles find-up@1.1.2
+1260 info install find-up@1.1.2
+1261 info postinstall find-up@1.1.2
+1262 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\findup-sync
+1263 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\findup-sync
+1264 info preinstall findup-sync@0.1.3
+1265 info linkStuff findup-sync@0.1.3
+1266 silly linkStuff findup-sync@0.1.3 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1267 verbose linkBins findup-sync@0.1.3
+1268 verbose linkMans findup-sync@0.1.3
+1269 verbose rebuildBundles findup-sync@0.1.3
+1270 verbose rebuildBundles [ 'glob', 'lodash', 'minimatch' ]
+1271 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\findup-sync\node_modules\minimatch
+1272 info install findup-sync@0.1.3
+1273 info postinstall findup-sync@0.1.3
+1274 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\forever-agent
+1275 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\forever-agent
+1276 info preinstall forever-agent@0.5.2
+1277 info linkStuff forever-agent@0.5.2
+1278 silly linkStuff forever-agent@0.5.2 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1279 verbose linkBins forever-agent@0.5.2
+1280 verbose linkMans forever-agent@0.5.2
+1281 verbose rebuildBundles forever-agent@0.5.2
+1282 info install forever-agent@0.5.2
+1283 info postinstall forever-agent@0.5.2
+1284 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\form-data
+1285 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\form-data
+1286 info preinstall form-data@0.2.0
+1287 info linkStuff form-data@0.2.0
+1288 silly linkStuff form-data@0.2.0 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1289 verbose linkBins form-data@0.2.0
+1290 verbose linkMans form-data@0.2.0
+1291 verbose rebuildBundles form-data@0.2.0
+1292 verbose rebuildBundles [ 'async', 'mime-db', 'mime-types' ]
+1293 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\form-data\node_modules\mime-db
+1294 info install form-data@0.2.0
+1295 info postinstall form-data@0.2.0
+1296 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\forwarded
+1297 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\forwarded
+1298 info preinstall forwarded@0.1.0
+1299 info linkStuff forwarded@0.1.0
+1300 silly linkStuff forwarded@0.1.0 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1301 verbose linkBins forwarded@0.1.0
+1302 verbose linkMans forwarded@0.1.0
+1303 verbose rebuildBundles forwarded@0.1.0
+1304 info install forwarded@0.1.0
+1305 info postinstall forwarded@0.1.0
+1306 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\fresh
+1307 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\fresh
+1308 info preinstall fresh@0.3.0
+1309 info linkStuff fresh@0.3.0
+1310 silly linkStuff fresh@0.3.0 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1311 verbose linkBins fresh@0.3.0
+1312 verbose linkMans fresh@0.3.0
+1313 verbose rebuildBundles fresh@0.3.0
+1314 info install fresh@0.3.0
+1315 info postinstall fresh@0.3.0
+1316 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\gaze
+1317 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\gaze
+1318 info preinstall gaze@0.5.2
+1319 info linkStuff gaze@0.5.2
+1320 silly linkStuff gaze@0.5.2 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1321 verbose linkBins gaze@0.5.2
+1322 verbose linkMans gaze@0.5.2
+1323 verbose rebuildBundles gaze@0.5.2
+1324 info install gaze@0.5.2
+1325 info postinstall gaze@0.5.2
+1326 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\get-stdin
+1327 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\get-stdin
+1328 info preinstall get-stdin@4.0.1
+1329 info linkStuff get-stdin@4.0.1
+1330 silly linkStuff get-stdin@4.0.1 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1331 verbose linkBins get-stdin@4.0.1
+1332 verbose linkMans get-stdin@4.0.1
+1333 verbose rebuildBundles get-stdin@4.0.1
+1334 info install get-stdin@4.0.1
+1335 info postinstall get-stdin@4.0.1
+1336 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\getobject
+1337 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\getobject
+1338 info preinstall getobject@0.1.0
+1339 info linkStuff getobject@0.1.0
+1340 silly linkStuff getobject@0.1.0 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1341 verbose linkBins getobject@0.1.0
+1342 verbose linkMans getobject@0.1.0
+1343 verbose rebuildBundles getobject@0.1.0
+1344 info install getobject@0.1.0
+1345 info postinstall getobject@0.1.0
+1346 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\glob
+1347 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\glob
+1348 info preinstall glob@5.0.5
+1349 info linkStuff glob@5.0.5
+1350 silly linkStuff glob@5.0.5 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1351 verbose linkBins glob@5.0.5
+1352 verbose linkMans glob@5.0.5
+1353 verbose rebuildBundles glob@5.0.5
+1354 info install glob@5.0.5
+1355 info postinstall glob@5.0.5
+1356 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\globule
+1357 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\globule
+1358 info preinstall globule@0.1.0
+1359 info linkStuff globule@0.1.0
+1360 silly linkStuff globule@0.1.0 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1361 verbose linkBins globule@0.1.0
+1362 verbose linkMans globule@0.1.0
+1363 verbose rebuildBundles globule@0.1.0
+1364 verbose rebuildBundles [ 'glob', 'inherits', 'lodash', 'minimatch' ]
+1365 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\globule\node_modules\inherits
+1366 info install globule@0.1.0
+1367 info postinstall globule@0.1.0
+1368 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\graceful-fs
+1369 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\graceful-fs
+1370 info preinstall graceful-fs@1.2.3
+1371 info linkStuff graceful-fs@1.2.3
+1372 silly linkStuff graceful-fs@1.2.3 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1373 verbose linkBins graceful-fs@1.2.3
+1374 verbose linkMans graceful-fs@1.2.3
+1375 verbose rebuildBundles graceful-fs@1.2.3
+1376 info install graceful-fs@1.2.3
+1377 info postinstall graceful-fs@1.2.3
+1378 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\grunt-legacy-log
+1379 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\grunt-legacy-log
+1380 info preinstall grunt-legacy-log@0.1.3
+1381 info linkStuff grunt-legacy-log@0.1.3
+1382 silly linkStuff grunt-legacy-log@0.1.3 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1383 verbose linkBins grunt-legacy-log@0.1.3
+1384 verbose linkMans grunt-legacy-log@0.1.3
+1385 verbose rebuildBundles grunt-legacy-log@0.1.3
+1386 verbose rebuildBundles [ 'lodash' ]
+1387 info install grunt-legacy-log@0.1.3
+1388 info postinstall grunt-legacy-log@0.1.3
+1389 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\grunt-legacy-log-utils
+1390 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\grunt-legacy-log-utils
+1391 info preinstall grunt-legacy-log-utils@0.1.1
+1392 info linkStuff grunt-legacy-log-utils@0.1.1
+1393 silly linkStuff grunt-legacy-log-utils@0.1.1 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1394 verbose linkBins grunt-legacy-log-utils@0.1.1
+1395 verbose linkMans grunt-legacy-log-utils@0.1.1
+1396 verbose rebuildBundles grunt-legacy-log-utils@0.1.1
+1397 verbose rebuildBundles [ 'lodash' ]
+1398 info install grunt-legacy-log-utils@0.1.1
+1399 info postinstall grunt-legacy-log-utils@0.1.1
+1400 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\grunt-legacy-util
+1401 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\grunt-legacy-util
+1402 info preinstall grunt-legacy-util@0.2.0
+1403 info linkStuff grunt-legacy-util@0.2.0
+1404 silly linkStuff grunt-legacy-util@0.2.0 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1405 verbose linkBins grunt-legacy-util@0.2.0
+1406 verbose linkMans grunt-legacy-util@0.2.0
+1407 verbose rebuildBundles grunt-legacy-util@0.2.0
+1408 verbose rebuildBundles [ 'async', 'lodash' ]
+1409 info install grunt-legacy-util@0.2.0
+1410 info postinstall grunt-legacy-util@0.2.0
+1411 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\has-ansi
+1412 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\has-ansi
+1413 info preinstall has-ansi@0.1.0
+1414 info linkStuff has-ansi@0.1.0
+1415 silly linkStuff has-ansi@0.1.0 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1416 verbose linkBins has-ansi@0.1.0
+1417 verbose link bins [ { 'has-ansi': 'cli.js' },
+1417 verbose link bins   'C:\\Tom\\Dropbox\\Projects\\WebDocumentValidator\\node_modules\\.bin',
+1417 verbose link bins   false ]
+1418 verbose linkMans has-ansi@0.1.0
+1419 verbose rebuildBundles has-ansi@0.1.0
+1420 info install has-ansi@0.1.0
+1421 info postinstall has-ansi@0.1.0
+1422 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\hawk
+1423 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\hawk
+1424 info preinstall hawk@1.1.1
+1425 info linkStuff hawk@1.1.1
+1426 silly linkStuff hawk@1.1.1 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1427 verbose linkBins hawk@1.1.1
+1428 verbose linkMans hawk@1.1.1
+1429 verbose rebuildBundles hawk@1.1.1
+1430 info install hawk@1.1.1
+1431 info postinstall hawk@1.1.1
+1432 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\hoek
+1433 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\hoek
+1434 info preinstall hoek@0.9.1
+1435 info linkStuff hoek@0.9.1
+1436 silly linkStuff hoek@0.9.1 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1437 verbose linkBins hoek@0.9.1
+1438 verbose linkMans hoek@0.9.1
+1439 verbose rebuildBundles hoek@0.9.1
+1440 info install hoek@0.9.1
+1441 info postinstall hoek@0.9.1
+1442 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\hooker
+1443 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\hooker
+1444 info preinstall hooker@0.2.3
+1445 info linkStuff hooker@0.2.3
+1446 silly linkStuff hooker@0.2.3 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1447 verbose linkBins hooker@0.2.3
+1448 verbose linkMans hooker@0.2.3
+1449 verbose rebuildBundles hooker@0.2.3
+1450 info install hooker@0.2.3
+1451 info postinstall hooker@0.2.3
+1452 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\hosted-git-info
+1453 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\hosted-git-info
+1454 info preinstall hosted-git-info@2.1.4
+1455 info linkStuff hosted-git-info@2.1.4
+1456 silly linkStuff hosted-git-info@2.1.4 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1457 verbose linkBins hosted-git-info@2.1.4
+1458 verbose linkMans hosted-git-info@2.1.4
+1459 verbose rebuildBundles hosted-git-info@2.1.4
+1460 info install hosted-git-info@2.1.4
+1461 info postinstall hosted-git-info@2.1.4
+1462 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\http-errors
+1463 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\http-errors
+1464 info preinstall http-errors@1.3.1
+1465 info linkStuff http-errors@1.3.1
+1466 silly linkStuff http-errors@1.3.1 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1467 verbose linkBins http-errors@1.3.1
+1468 verbose linkMans http-errors@1.3.1
+1469 verbose rebuildBundles http-errors@1.3.1
+1470 info install http-errors@1.3.1
+1471 info postinstall http-errors@1.3.1
+1472 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\http-signature
+1473 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\http-signature
+1474 info preinstall http-signature@0.10.1
+1475 info linkStuff http-signature@0.10.1
+1476 silly linkStuff http-signature@0.10.1 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1477 verbose linkBins http-signature@0.10.1
+1478 verbose linkMans http-signature@0.10.1
+1479 verbose rebuildBundles http-signature@0.10.1
+1480 info install http-signature@0.10.1
+1481 info postinstall http-signature@0.10.1
+1482 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\iconv-lite
+1483 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\iconv-lite
+1484 info preinstall iconv-lite@0.4.13
+1485 info linkStuff iconv-lite@0.4.13
+1486 silly linkStuff iconv-lite@0.4.13 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1487 verbose linkBins iconv-lite@0.4.13
+1488 verbose linkMans iconv-lite@0.4.13
+1489 verbose rebuildBundles iconv-lite@0.4.13
+1490 info install iconv-lite@0.4.13
+1491 info postinstall iconv-lite@0.4.13
+1492 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\indent-string
+1493 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\indent-string
+1494 info preinstall indent-string@2.1.0
+1495 info linkStuff indent-string@2.1.0
+1496 silly linkStuff indent-string@2.1.0 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1497 verbose linkBins indent-string@2.1.0
+1498 verbose linkMans indent-string@2.1.0
+1499 verbose rebuildBundles indent-string@2.1.0
+1500 info install indent-string@2.1.0
+1501 info postinstall indent-string@2.1.0
+1502 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\inflight
+1503 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\inflight
+1504 info preinstall inflight@1.0.4
+1505 info linkStuff inflight@1.0.4
+1506 silly linkStuff inflight@1.0.4 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1507 verbose linkBins inflight@1.0.4
+1508 verbose linkMans inflight@1.0.4
+1509 verbose rebuildBundles inflight@1.0.4
+1510 info install inflight@1.0.4
+1511 info postinstall inflight@1.0.4
+1512 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\inherits
+1513 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\inherits
+1514 info preinstall inherits@2.0.1
+1515 info linkStuff inherits@2.0.1
+1516 silly linkStuff inherits@2.0.1 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1517 verbose linkBins inherits@2.0.1
+1518 verbose linkMans inherits@2.0.1
+1519 verbose rebuildBundles inherits@2.0.1
+1520 info install inherits@2.0.1
+1521 info postinstall inherits@2.0.1
+1522 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\ipaddr.js
+1523 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\ipaddr.js
+1524 info preinstall ipaddr.js@1.0.5
+1525 info linkStuff ipaddr.js@1.0.5
+1526 silly linkStuff ipaddr.js@1.0.5 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1527 verbose linkBins ipaddr.js@1.0.5
+1528 verbose linkMans ipaddr.js@1.0.5
+1529 verbose rebuildBundles ipaddr.js@1.0.5
+1530 info install ipaddr.js@1.0.5
+1531 info postinstall ipaddr.js@1.0.5
+1532 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\is-arrayish
+1533 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\is-arrayish
+1534 info preinstall is-arrayish@0.2.1
+1535 info linkStuff is-arrayish@0.2.1
+1536 silly linkStuff is-arrayish@0.2.1 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1537 verbose linkBins is-arrayish@0.2.1
+1538 verbose linkMans is-arrayish@0.2.1
+1539 verbose rebuildBundles is-arrayish@0.2.1
+1540 info install is-arrayish@0.2.1
+1541 info postinstall is-arrayish@0.2.1
+1542 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\is-builtin-module
+1543 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\is-builtin-module
+1544 info preinstall is-builtin-module@1.0.0
+1545 info linkStuff is-builtin-module@1.0.0
+1546 silly linkStuff is-builtin-module@1.0.0 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1547 verbose linkBins is-builtin-module@1.0.0
+1548 verbose linkMans is-builtin-module@1.0.0
+1549 verbose rebuildBundles is-builtin-module@1.0.0
+1550 info install is-builtin-module@1.0.0
+1551 info postinstall is-builtin-module@1.0.0
+1552 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\is-finite
+1553 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\is-finite
+1554 info preinstall is-finite@1.0.1
+1555 info linkStuff is-finite@1.0.1
+1556 silly linkStuff is-finite@1.0.1 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1557 verbose linkBins is-finite@1.0.1
+1558 verbose linkMans is-finite@1.0.1
+1559 verbose rebuildBundles is-finite@1.0.1
+1560 info install is-finite@1.0.1
+1561 info postinstall is-finite@1.0.1
+1562 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\is-promise
+1563 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\is-promise
+1564 info preinstall is-promise@1.0.1
+1565 info linkStuff is-promise@1.0.1
+1566 silly linkStuff is-promise@1.0.1 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1567 verbose linkBins is-promise@1.0.1
+1568 verbose linkMans is-promise@1.0.1
+1569 verbose rebuildBundles is-promise@1.0.1
+1570 info install is-promise@1.0.1
+1571 info postinstall is-promise@1.0.1
+1572 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\is-utf8
+1573 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\is-utf8
+1574 info preinstall is-utf8@0.2.1
+1575 info linkStuff is-utf8@0.2.1
+1576 silly linkStuff is-utf8@0.2.1 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1577 verbose linkBins is-utf8@0.2.1
+1578 verbose linkMans is-utf8@0.2.1
+1579 verbose rebuildBundles is-utf8@0.2.1
+1580 info install is-utf8@0.2.1
+1581 info postinstall is-utf8@0.2.1
+1582 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\isarray
+1583 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\isarray
+1584 info preinstall isarray@0.0.1
+1585 info linkStuff isarray@0.0.1
+1586 silly linkStuff isarray@0.0.1 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1587 verbose linkBins isarray@0.0.1
+1588 verbose linkMans isarray@0.0.1
+1589 verbose rebuildBundles isarray@0.0.1
+1590 info install isarray@0.0.1
+1591 info postinstall isarray@0.0.1
+1592 verbose rebuild bundle C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\java
+1593 info build C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules\java
+1594 info preinstall java@0.6.1
+1595 info linkStuff java@0.6.1
+1596 silly linkStuff java@0.6.1 has C:\Tom\Dropbox\Projects\WebDocumentValidator\node_modules as its parent node_modules
+1597 verbose linkBins java@0.6.1
+1598 verbose linkMans java@0.6.1
+1599 verbose rebuildBundles java@0.6.1
+1600 verbose rebuildBundles [ 'async' ]
+1601 info install java@0.6.1
+1602 verbose unsafe-perm in lifecycle true
+1603 info java@0.6.1 Failed to exec install script
+1604 verbose stack Error: java@0.6.1 install: `node-gyp rebuild`
+1604 verbose stack Exit status 1
+1604 verbose stack     at EventEmitter.<anonymous> (C:\Program Files\nodejs\node_modules\npm\lib\utils\lifecycle.js:217:16)
+1604 verbose stack     at emitTwo (events.js:87:13)
+1604 verbose stack     at EventEmitter.emit (events.js:172:7)
+1604 verbose stack     at ChildProcess.<anonymous> (C:\Program Files\nodejs\node_modules\npm\lib\utils\spawn.js:24:14)
+1604 verbose stack     at emitTwo (events.js:87:13)
+1604 verbose stack     at ChildProcess.emit (events.js:172:7)
+1604 verbose stack     at maybeClose (internal/child_process.js:827:16)
+1604 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+1605 verbose pkgid java@0.6.1
+1606 verbose cwd C:\Tom\Dropbox\Projects\WebDocumentValidator
+1607 error Windows_NT 6.3.9600
+1608 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install"
+1609 error node v4.4.2
+1610 error npm  v2.15.0
+1611 error code ELIFECYCLE
+1612 error java@0.6.1 install: `node-gyp rebuild`
+1612 error Exit status 1
+1613 error Failed at the java@0.6.1 install script 'node-gyp rebuild'.
+1613 error This is most likely a problem with the java package,
+1613 error not with npm itself.
+1613 error Tell the author that this fails on your system:
+1613 error     node-gyp rebuild
+1613 error You can get information on how to open an issue for this project with:
+1613 error     npm bugs java
+1613 error Or if that isn't available, you can get their info via:
+1613 error
+1613 error     npm owner ls java
+1613 error There is likely additional logging output above.
+1614 verbose exit [ 1, true ]

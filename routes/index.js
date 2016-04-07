@@ -48,7 +48,7 @@ router.post('/upload', function(req, res, next)
     var type = req.body.DocType;
     var filename = Date.now();
     var filepath = [uploadsDir, filename].join('');
-    
+    console.log('1');
     if (dataObj) 
         fs.writeFile(filepath, dataObj.data, function(err)
         {

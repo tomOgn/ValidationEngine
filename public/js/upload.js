@@ -1,8 +1,10 @@
 (function() {
     var DocSource, DocType;
 
-  function setButtonStatus(status) {
-    switch (status) {
+  function setButtonStatus(status)
+  {
+    switch (status) 
+    {
       case 'success':
         $('#button-upload').attr('class', 'btn btn-success');
         $('.failure-facade').hide();
@@ -34,9 +36,10 @@
     }
   }
 
-    $('#ruleSetsTable').DataTable( {
-            "ajax": "/getRules"
-        } );
+    $('#ruleSetsTable').DataTable(
+    {
+        "ajax": "/getRules"
+    });
 
     $('#ruleSetsTable tbody').on( 'click', 'tr', function ()
     {
@@ -53,12 +56,14 @@
     var handleFileInput = function(e)
     {
         setButtonStatus('ready');
-
-        // Admit only docx and xml files.
+ 
+        // Admit only docx, xml, rar and zip files.
         var file = e.target.files[0];
         if (!file.type.match("application/xml") && 
             !file.type.match("text/xml") &&
-            !file.type.match("application/vnd.openxmlformats-officedocument.wordprocessingml.document"))
+            !file.type.match("application/vnd.openxmlformats-officedocument.wordprocessingml.document") &&
+            !file.type.match("application/x-rar-compressed, application/octet-stream") &&
+            !file.type.match("application/zip, application/octet-stream"))
             return;           
         
         // Load the file.  
