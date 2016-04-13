@@ -6,28 +6,6 @@
         <items i='2' type='XSLT 1' path='collect2.xsl' />
     </collect>
     <compare>
-        <!-- (S1(x) => S2(x)) && (S2(x) => S1(x)) -->
-        <!-- ========================================== -->
-        <!-- !(!(!S1(x) || S2(x)) || !(!S1(x) || S2(x)))  -->
-        <not>
-            <or>
-                <not>
-                    <or>
-                        <not>
-                            <predicate type="belongs" value='1'>
-                        </not>
-                        <predicate type="belongs" value='2'>
-                    </or>
-                </not>
-                <not>
-                    <or>
-                        <not>
-                            <predicate type="belongs" value='2'>
-                        </not>
-                        <predicate type="belongs" value='1'>
-                    </or>
-                </not>
-            </or>
-        </not>
+    
     </compare>
 </collect-and-compare>

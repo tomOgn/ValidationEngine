@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rule type='collect-and-compare'>
+    <name>Cross Check Acronyms</name>
+    <description>Check the correct correspondence between acronyms descripted in the table and acronyms found within the document</description>
+	<collect-and-compare>
+	    <collect>
+	        <items i='1' type='XSLT 1'>
+				<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+				    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+				    xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"
+				    exclude-result-prefixes="xsl xs w"
+				    version="1.0">
+				    <xsl:output method="xml" indent="yes" omit-xml-declaration="yes"/>
+				    <xsl:template match="/">
+				        <items>
+				            <xsl:for-each select="//w:tbl[w:tr[1]//w:tc[1]//w:t='Acronimo' and w:tr[1]//w:tc[2]//w:t='Descrizione']/w:tr[position()>1]/w:tc[1]//w:t/text()">
+				                <xsl:sort select="."/>
+				                <item>
+				                    <xsl:value-of select="."/>
+				                </item>
+				            </xsl:for-each>
+				        </items>
+				    </xsl:template>
+				</xsl:stylesheet>
+	        </items>
+	        <items i='2' type='XSLT 2'>
+				<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+				    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+				    xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"
+				    exclude-result-prefixes="xsl xs w"
+				    version="2.0">
+				    <xsl:output method="xml" indent="yes" omit-xml-declaration="yes"/>
+				    <xsl:strip-space elements="*"/>
+				    
+				    <xsl:variable name="allAcronyms">
+				        <xsl:for-each select="//w:t[not(ancestor::w:tbl[w:tr[1]//w:tc[1]//w:t='Acronimo' and w:tr[1]//w:tc[2]//w:t='Descrizione'])]">
+				            <xsl:analyze-string select="." regex="([A-Z]{{2,}})">
+				                <xsl:matching-substring>
+				                    <xsl:value-of select="concat(regex-group(1), ' ')"/>
+				                </xsl:matching-substring>
+				            </xsl:analyze-string>
+				        </xsl:for-each>
+				    </xsl:variable>  
+				    
+				    <xsl:variable name="distinctAcronyms" select="distinct-values(tokenize(normalize-space($allAcronyms), ' '))"/>
+				    
+				    <xsl:template match="/">
+				        <items>
+				            <xsl:for-each select="$distinctAcronyms">
+				                <xsl:sort select="."/>
+				                <item>
+				                    <xsl:value-of select="."/>
+				                </item>
+				            </xsl:for-each>
+				        </items>
+				    </xsl:template>
+				</xsl:stylesheet>
+	        </items>
+	    </collect>
+	    <compare type='XSLT 1'>
+			<xsl:stylesheet
+			    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+			    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			    exclude-result-prefixes="xs"
+			    version="2.0">
+			    <xsl:output method="xml" indent="yes" omit-xml-declaration="yes"/>
+			    <xsl:template match="/">
+			        <results>
+			            <!-- Every acronym in the document must be defined in the table of acronyms -->
+			            <xsl:for-each select="//items[@id='1']/item">
+			                <xsl:call-template name="document-to-table"/>
+			            </xsl:for-each>
+			            <!-- Every acronym within the table of acronyms must be used at least once in the document -->
+			            <xsl:for-each select="//items[@id='2']/item">
+			                <xsl:call-template name="table-to-document"/>
+			            </xsl:for-each>
+			        </results>
+			    </xsl:template>
+			    <xsl:template name="document-to-table">
+			        <item>
+			            <xsl:variable name="passed" select="//items[@id='2']/item = ." />
+			            <xsl:attribute name="passed">
+			                <xsl:value-of select="$passed"/>
+			            </xsl:attribute>
+			            <description>
+			            <xsl:choose> 
+			                <xsl:when test="$passed">The acronym is both in the document and in the table.</xsl:when>
+			                <xsl:otherwise>The acronym is only in the document.</xsl:otherwise>
+			            </xsl:choose>
+			            </description>
+			            <value><xsl:value-of select="."/></value>
+			        </item>
+			    </xsl:template>
+			    <xsl:template name="table-to-document">
+			        <xsl:if test="not(//items[@id='1']/item = .)">
+			            <item>
+			                <xsl:attribute name="passed">
+			                    <xsl:value-of select="false()"/>
+			                </xsl:attribute>
+			                <description>The acronym is only in the table.</description>
+			                <value><xsl:value-of select="."/></value>
+			            </item>
+			        </xsl:if>
+			    </xsl:template>
+			</xsl:stylesheet>
+	    </compare>
+	</collect-and-compare>
+</rule>

@@ -7,10 +7,11 @@ block content
         #header-headline
             | Web Document Validator
     .main
-        .container
+        .container#container1
             .row
                 p
-                    span (1) Select the document to validate (docx or xml):
+                    span.step (1) Select the document to validate (docx or xml):
+            .row
                 input#file-input(type='file' name='file')
                 button#button-upload.btn.btn-primary(type='submit')
                     .upload-facade
@@ -21,10 +22,12 @@ block content
                         |Failed
                     .loading-spokes
                         img(src='components/loading/loading-spokes.svg')
-        .container#rulesContainer
+        .container#container-rules
             .row
                 p
-                    span (2) Select the rules to fire:
+                    span.step (2) Select the rules to fire:
+                    img(src='img/arrow.png')#close1.close-button
+            .row
                 table#ruleSetsTable.display(cellspacing="0" width="100%")
                     thead
                         tr
@@ -32,10 +35,22 @@ block content
                             th Name
                             th Description
                 button#button-validate.btn.btn-primary Validate
-        .container#containerResults
+        .container#container-results
             .row
                 p
-                    span (3) Results:
-                textarea#textareaResults
-     
+                    span.step (3) View and download the results:
+                    img(src='img/arrow.png')#close2.close-button
+            .row
+                div#tabs
+                    ul
+                        li
+                            a(href="#tabs-1") Synthetical View
+                        li
+                            a(href="#tabs-2") Analytical View
+                    div#tabs-1
+                        table#syntheticalTable(cellspacing="0" width="100%")
+                    div#tabs-2
+                        table#analyticalTable(cellspacing="0" width="100%")
+                button#button-download-SyntheticalView.btn.btn-primary Download Synthetical View
+                button#button-download-AnalyticalView.btn.btn-primary Download Analytical View
 block scripts

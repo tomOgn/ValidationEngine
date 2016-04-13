@@ -45,20 +45,36 @@ router.post('/validation', function(req, res, next)
 router.post('/upload', function(req, res, next)
 {
     var dataObj = dataurl.parse(req.body.DocData);
+    var fileName = req.body.DocName;
     var type = req.body.DocType;
-    var filename = Date.now();
-    var filepath = [uploadsDir, filename].join('');
-    console.log('1');
+    var filepath = path.join(uploadsDir, fileName);
+
     if (dataObj) 
         fs.writeFile(filepath, dataObj.data, function(err)
         {
             if (err)
                 next(err);
             else
-                res.send(validator.SetDocument(filename, type));
+                res.send(validator.SetDocument(fileName, type));
         });
     else 
         next({ error: 'Unable to read data.' });
+});
+
+// HTTP Get request to generate the Synthetical View.
+router.get('/downloadSyntheticalView', function(req, res)
+{
+    var filePath = validator.DownloadSyntheticalView();
+    res.setHeader('Content-type', "application/vnd.openxmlformats-officedocument.wordprocessingml.document");
+    res.download(filePath);
+});
+
+// HTTP Get request to generate the Synthetical View.
+router.get('/downloadAnalyticalView', function(req, res)
+{
+    var filePath = validator.DownloadAnalyticalView();
+    res.setHeader('Content-type', "application/vnd.openxmlformats-officedocument.wordprocessingml.document");
+    res.download(filePath);
 });
 
 module.exports = router;

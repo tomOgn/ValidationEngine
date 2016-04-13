@@ -1,0 +1,13 @@
+<collect>
+	<items id='1'>
+		<item>ABC</item>
+		<item>DD</item>
+		<item>FR</item>
+		<item>BB</item>
+	</items>
+	<items id='2'>
+		<item>ABC</item>
+		<item>EE</item>
+		<item>FR</item>
+	</items>
+</collect>
