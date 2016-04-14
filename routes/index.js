@@ -1,4 +1,5 @@
 // Libraries.
+var async = require("async");
 var express = require('express');
 var fs = require('fs');
 var dataurl = require('dataurl');
@@ -37,8 +38,7 @@ router.get('/getRules', function(req, res)
 // POST method for validating the document according to a selected list of rules.
 router.post('/validation', function(req, res, next)
 {
-    var answers = validator.fireRules(req.body.Rules);
-    res.send(answers);
+    validator.fireRules(req.body.Rules, res);
 });
 
 // POST method for uploading the file.

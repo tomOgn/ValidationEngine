@@ -3,6 +3,7 @@ var DocValidator = function()
     var self = this;
     
     // External libraries
+    var async = require("async");
     var xslt4node = require('xslt4node');
     var XRegExp = require('xregexp');
     var docxtemplater = require('docxtemplater');
@@ -33,15 +34,13 @@ var DocValidator = function()
     };
     
     // Global variables
-    var Documents = [], SyntheticalData, AnalyticalData;
+    var Documents = [], SyntheticalData, AnalyticalData, AllRules, ValidationResults = [];
     var uploadsDirectory = path.resolve(__dirname, '../public/uploads');
     var templateDirectory = path.resolve(__dirname, '../templates');
     var generatedDirectory = path.resolve(__dirname, '../generated');
     var RulesDirectory = path.resolve(__dirname, '../xml/rules');
     var extractedFolder = path.join(uploadsDirectory, "extracted");
     var saxonPath = path.resolve(__dirname, '../saxon/saxon9he.jar');
-    var saxon = new Saxon(saxonPath);
-    saxon.on('error', function(err){ console.log(err) });
 
     var namespaces =
     {
@@ -63,86 +62,151 @@ var DocValidator = function()
     {
         return true; // TODO
     }
-   
+  
+    
     // Validate the document against a set of rules.
-    self.validate = function(rulePath, documentIndex)
+    self.validate = function(rule, document, callbackRule)
     {
-        console.log('rulePath = ' + rulePath);
-        console.log('documentIndex = ' + documentIndex);
-        var document = Documents[documentIndex];
-        
+        // Get the rule filename.
+        var fileName = AllRules[rule];
+
         // Parse the XML file.
+        var rulePath = path.join(RulesDirectory, fileName);
         var ruleString = fs.readFileSync(rulePath).toString();
         var ruleDom = new dom().parseFromString(ruleString);
         
         // Get rule name and description.
-        var description = xpath.select("//description/text()", ruleDom).toString();
-        var name = xpath.select("//name/text()", ruleDom).toString();
+        var ruleDescription = xpath.select("//description/text()", ruleDom).toString();
+        var ruleName = xpath.select("//name/text()", ruleDom).toString();
         
         // Distinguish between Collect-And-Check and Collect-And-Compare rules.
         var ruleType = xpath.select("/rule/@type", ruleDom)[0].value;
-        console.log('ruleType = ' + ruleType);
-        var collectValue, collectType, results;
+        var collectValue, collectType;
+ 
         switch (ruleType)
         {
-            case 'collect-and-check':
-                collectType = xpath.select("//collect/@type", ruleDom)[0].value;
-                collectValue = xpath.select("//collect/*", ruleDom).toString();
-                var items = performCollect(collectType, collectValue);
-                results = performCheck(items);
-                break;
-            case 'collect-and-compare':
-                collectType = xpath.select("//collect/items[@i='1']/@type", ruleDom)[0].value;
-                collectValue = xpath.select("//collect/items[@i='1']/*", ruleDom).toString();
-                console.log('collectType = ' + collectType);
-                console.log('collectValue = ' + collectValue);
-                var items1 = performCollect(collectType, collectValue);
-                collectType = xpath.select("//collect/items[@i='2']/@type", ruleDom)[0].value;
-                collectValue = xpath.select("//collect/items[@i='2']/*", ruleDom).toString();
-                console.log('collectType = ' + collectType);
-                console.log('collectValue = ' + collectValue);
-                var items2 = performCollect(collectType, collectValue);
-                break;
+            case 'collect-and-check': collectAndCheck(); break;
+            case 'collect-and-compare': collectAndCompare(); break;
+        }
+        
+        function collectAndCheck()
+        {
+            var asyncItems = [];
+            async.series(
+            [
+                function(callback)
+                {
+                    collectType = xpath.select("//collect/@type", ruleDom)[0].value;
+                    collectValue = xpath.select("//collect/*", ruleDom).toString();
+                    performCollect(collectType, collectValue, asyncItems, callback);
+                }
+            ],
+            function(err)
+            { 
+                if (err) return next(err);
+                
+                var results = performCheck(asyncItems[0]);
+
+                ValidationResults.push(
+                { 
+                    'document' : document.Name, 
+                    'name' : ruleName, 
+                    'description' : ruleDescription, 
+                    'results' : results 
+                });
+                callbackRule();
+            });
+        }
+        
+        function parseResults(items)
+        {
+            // Get the items.
+            var itemsDom = new dom().parseFromString(items);
+            
+            var children = itemsDom.firstChild.childNodes;
+            var results = [];
+            var index = 0;
+            for (var i = 0; i < children.length; i++)
+            {
+                var child = children[i];
+                if (child.nodeName == 'item')
+                {
+                    var item = {};
+                    item["index"] = index;
+                    index++;
+                    var subchildren = child.childNodes;
+                    for (var j = 0; j < subchildren.length; j++)
+                        if (subchildren[j].nodeName == 'value')
+                            item["value"] = subchildren[j].firstChild.nodeValue;
+                    item["valid"] = child.attributes[0].nodeValue;
+                    
+                    results.push(item);
+                }
+            }
+
+            return results;
+        }
+        
+        function collectAndCompare()
+        {
+            var items1, items2;
+            var asyncItems = [];
+            async.series(
+            [
+                function(callback)
+                {
+                    collectType = xpath.select("//collect/items[@i='1']/@type", ruleDom)[0].value;
+                    collectValue = xpath.select("//collect/items[@i='1']/*", ruleDom).toString();
+                    performCollect(collectType, collectValue, asyncItems, callback);
+                },
+                function(callback)
+                {
+                    collectType = xpath.select("//collect/items[@i='2']/@type", ruleDom)[0].value;
+                    collectValue = xpath.select("//collect/items[@i='2']/*", ruleDom).toString();
+                    performCollect(collectType, collectValue, asyncItems, callback);
+                }
+            ],
+            function(err)
+            { 
+                if (err) return next(err);
+
+                // Unify the two collections in a single tree.
+                var xmlString = "<collect>" + asyncItems[0] + asyncItems[1] + "</collect>";
+                
+                var results = performCompare(xmlString);
+                var parsedResults = parseResults(results);
+                ValidationResults.push(
+                { 
+                    'document' : document.Name, 
+                    'name' : ruleName, 
+                    'description' : ruleDescription, 
+                    'results' : parsedResults 
+                });
+                callbackRule();
+            });
         }
         
         // Collect the items to verify against a rule.
-        function performCollect(type, value)
+        function performCollect(type, value, asyncItems, callback)
         {
             // Distinguish among the rule types.
             switch (type)
             {
-                case 'Regex':  return items = collectRegex();
-                case 'XPath':  return items = collectXPath()
-                case 'XSLT 1': return items = collectXSLT1();     
-                case 'XSLT 2': return items = collectXSLT2();   
+                case 'Regex':  collectRegex(); break;
+                case 'XPath':  collectXPath(); break;
+                case 'XSLT 1': collectXSLT1(); break;     
+                case 'XSLT 2': collectXSLT2(); break;  
                 case 'XQuery':       
             }
             
             function collectXSLT2()
             {
-                console.log('1');
-                
-                var xmlPath = path.resolve(__dirname, '../saxon/xmlPath.xml');
-                fs.writeFileSync(xmlPath, document.Text, 'utf8');
-                console.log('2');
                 var xslPath = path.resolve(__dirname, '../saxon/xslPath.xsl');
                 fs.writeFileSync(xslPath, value, 'utf8');
-                console.log('3');
-                // Create a readable stream.
-                /*var xmlStream = new Readable;
-                xmlStream.push(document.Text);
-                xmlStream.push(null);
-                console.log('4');
-                var xslStream = new Readable;
-                xslStream.push(value);
-                xslStream.push(null);
-                console.log('5');*/
- 
-                console.log('6');
-                var readerStream = fs.createReadStream(xmlPath).pipe(saxon.xslt(xslPath));
-                var data = ''
-                var once = false;
-                console.log('7');
+                var saxon = new Saxon(saxonPath);
+                saxon.on('error', function(err){ console.log(err) });
+                var readerStream = fs.createReadStream(document.Path).pipe(saxon.xslt(xslPath));
+                var data = '', once = false;
                 
                 readerStream.on('data', (chunk) =>
                 {
@@ -153,7 +217,8 @@ var DocValidator = function()
                 {
                     if (once) return;
                     once = true;
-                    return data;
+                    asyncItems.push(data);
+                    callback();
                 });
             }
             
@@ -167,7 +232,8 @@ var DocValidator = function()
                     props: { indent: 'yes' }
                 };
                 
-                return xslt4node.transformSync(config);
+                asyncItems.push(xslt4node.transformSync(config));
+                callback();
             }
             
             function collectRegex()
@@ -183,8 +249,8 @@ var DocValidator = function()
                     xml.ele('item', {'i': i}, match[0]);
                 });
                 xml.end(xmlbuilder.stringWriter());
-
-                return xml.toString();
+                asyncItems.push(xml.toString());
+                callback();
             }
             
             function collectXPath()
@@ -198,17 +264,42 @@ var DocValidator = function()
                     xml.ele('item', {'i': i}, nodes[i]);
                 xml.end(xmlbuilder.stringWriter());
                 
-                return xml.toString();
+                asyncItems.push(xml.toString());
+                callback();
             } 
-        }       
+        }    
+           
+        // Compare two lists of items against a rule.
+        function performCompare(collect)
+        {
+            var compareType = xpath.select("//compare/@type", ruleDom)[0].value;
+            var compareValue = xpath.select("//compare/*", ruleDom).toString();
+            
+            switch (compareType)
+            {
+                case 'XSLT 1': return compareXSLT1();
+            }
+
+            function compareXSLT1()
+            {
+                var config =
+                {
+                    xslt: compareValue,
+                    source: collect,
+                    result: String,
+                    props: { indent: 'yes' }
+                };
+                
+                return xslt4node.transformSync(config);
+            }
+        }
             
         // Check the given items against a rule.
         function performCheck(items)
         {
             var checkType = xpath.select("//check/@type", ruleDom)[0].value;
             var checkValue = xpath.select("//check/text()", ruleDom).toString();
-            console.log('checkType = ' + checkType);
-            console.log('checkValue = ' + checkValue);
+
             // Get the items.
             var itemsDom = new dom().parseFromString(items);
             
@@ -240,19 +331,17 @@ var DocValidator = function()
                 return results;
             }
         }
-        
-        return { 'document' : document.Name, 'name' : name, 'description' : description, 'results' : results };
     }
     
-    function prepareViewsData(data)
+    function prepareViewsData()
     {
         // Create Synthetical and Analytical View data.
         AnalyticalData = {'Results' : []};
         SyntheticalData = {'Results' : []};
         var document, rule, name, results, matches, failed, result;
-        for (var i = 0; i < data.length; i++)
+        for (var i = 0; i < ValidationResults.length; i++)
         {
-            rule = data[i];
+            rule = ValidationResults[i];
             document = rule['document'];
             name = rule['name'];
             results = rule['results'];
@@ -260,7 +349,7 @@ var DocValidator = function()
             failed = 0;
             for (var j = 0; j < matches; j++)
             {
-                if (!results[j]['valid'])
+                if (!results[j]['valid'] || results[j]['valid'] == 'false')
                     failed++;
                 result = results[j];
                 AnalyticalData.Results.push(
@@ -277,27 +366,29 @@ var DocValidator = function()
     }
     
     // Validate the document against the selected rules.
-    self.fireRules = function(rules)
+    self.fireRules = function(rules, response)
     {
-        console.log('Documents.length = ' + Documents.length);
-        console.log('rules.length = ' + rules.length);
-        // Perform validation against every document.
-        for (var j = 0; j < Documents.length; j++)
+        ValidationResults = [];
+
+        async.forEach(Documents, function(document, callbackDocument)
         {
-            // Perform validation for each rule.
-            var results = [];
-            for (var i = 0; i < rules.length; i++)
+            async.forEach(rules, function(rule, callbackRule)
             {
-                var rulePath = path.join(RulesDirectory, rules[i]);
-                results.push(this.validate(rulePath, j));
-            }
-        }
-
-        prepareViewsData(results);
-
-        return results;
+                self.validate(rule, document, callbackRule);
+            },
+            function(err)
+            {
+                callbackDocument();
+            });
+        },
+        function(err)
+        {
+            prepareViewsData();
+            
+            response.send({ 'AnalyticalData' : AnalyticalData, 'SyntheticalData' : SyntheticalData });
+        });
     }
-
+    
     // Set the document to validate.
     self.SetDocument = function(fileName, type)
     {
@@ -342,7 +433,7 @@ var DocValidator = function()
         var documentString;
         for (var i = 0; i < files.length; i++)
         {
-            var file = files[i];
+            var file = files[i], documentPath;
             
             // Distinguish between DOCX and XML files.
             switch (file.Type)
@@ -351,6 +442,7 @@ var DocValidator = function()
                 case 'application/xml':
                 case 'text/xml':
                     documentString = fs.readFileSync(file.Path).toString();
+                    documentPath = file.Path;
                     break;
                 // Case DOCX file.
                 case 'application/vnd.openxmlformats-officedocument.wordprocessingml.document':
@@ -362,19 +454,25 @@ var DocValidator = function()
                     
                     // Extract the main part.
                     var mainPart = doc.mainDocumentPart();
-                    
+
                     // Set the document as the DOCX main part.
                     documentString = mainPart.data;
+                    
+                    var zip = new AdmZip(file.Path);
+                    var basename = path.basename(file.Path, '.docx');
+                    var folderPath = path.join(uploadsDirectory, basename);
+                    zip.extractAllTo(folderPath);
+                    documentPath = path.join(folderPath, 'word/document.xml');
                     break;
                 default:
                     continue;
             }
 
             // Set the variable holding the document.
-            Documents.push({ Name : file.Name, Text : documentString, DOM : new dom().parseFromString(documentString)});
+            Documents.push({ Path : documentPath, Name : file.Name, Text : documentString, DOM : new dom().parseFromString(documentString) });
             
             // Destroy the temporary file.
-            fs.unlink(file.Path);
+            //fs.unlink(file.Path);
         }
 
         return true;
@@ -420,6 +518,7 @@ var DocValidator = function()
         var rulePaths = fs.readdirSync(RulesDirectory);
         
         // Construct the list of metadata.
+        AllRules = {};
         var data = [];
         for (var i = 0; i < rulePaths.length; i++)
             data.push(getMetadata(rulePaths[i]));
@@ -443,7 +542,10 @@ var DocValidator = function()
             var description = xpath.select("/rule/description/text()", fileDom).toString();
             var target = xpath.select("/rule/target/@type", fileDom).value;
             
-            return [rulePath, name, description];
+            // Populate the global variable.
+            AllRules[name] = rulePath;
+            
+            return [name, description];
         }
     }
 };

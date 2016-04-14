@@ -12,7 +12,7 @@
 				    version="1.0">
 				    <xsl:output method="xml" indent="yes" omit-xml-declaration="yes"/>
 				    <xsl:template match="/">
-				        <items>
+				        <items id='1'>
 				            <xsl:for-each select="//w:tbl[w:tr[1]//w:tc[1]//w:t='Acronimo' and w:tr[1]//w:tc[2]//w:t='Descrizione']/w:tr[position()>1]/w:tc[1]//w:t/text()">
 				                <xsl:sort select="."/>
 				                <item>
@@ -45,7 +45,7 @@
 				    <xsl:variable name="distinctAcronyms" select="distinct-values(tokenize(normalize-space($allAcronyms), ' '))"/>
 				    
 				    <xsl:template match="/">
-				        <items>
+				        <items id='2'>
 				            <xsl:for-each select="$distinctAcronyms">
 				                <xsl:sort select="."/>
 				                <item>

@@ -15,7 +15,7 @@
 				    <xsl:variable name="distinctAcronyms" select="distinct-values(tokenize(normalize-space($allAcronyms), ' '))"/>
 				    
 				    <xsl:template match="/">
-				        <items>
+				        <items id="2">
 				            <xsl:for-each select="$distinctAcronyms">
 				                <xsl:sort select="."/>
 				                <item>

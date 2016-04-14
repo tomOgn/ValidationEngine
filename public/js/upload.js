@@ -95,9 +95,12 @@
     // Callback for successful upload.
     var successfulUpload = function(response)
     {
-        setButtonStatus('success');
+        var table = $('#ruleSetsTable').DataTable();
+        table.rows().select();
+        setButtonStatus('success'); 
         $("#container1").addClass("disabledDiv");
         $('#container-rules').show();
+        $('#button-validate').show();
     };
     
     // Callback for unsuccessful upload.
@@ -130,25 +133,45 @@
         });
     };
     
-    function populateSynteticalView(response)
+    function populateViews(response)
     {
-        // Create the data set.
+        // Populate the analytical view.
         var data = [];
-        for (var i = 0; i < response.length; i++)
-        {
-            var rule = response[i];
-            var document = rule['document'];
-            var name = rule['name'];
-            var results = rule['results'];
-            var matches = results.length;
-            var failed = 0;
-            for (var j = 0; j < matches; j++)
-                if (!results[j]['valid'])
-                    failed++;
-            data.push([document, name, matches, failed]);
-        }
+        var results = response.AnalyticalData.Results;
+        for (var i = 0; i < results.length; i++)
+            data.push(
+                [
+                    results[i].Document, 
+                    results[i].Rule,
+                    results[i].Index,
+                    results[i].Value,
+                    results[i].Passed
+                ]);
 
-        // Show the data set.
+        $('#analyticalTable').DataTable(
+        {
+            data: data,
+            columns: [
+                { title: "Document" },
+                { title: "Rule" },
+                { title: "Element Index" },
+                { title: "Element Value" },
+                { title: "Passed" }
+            ]
+        }); 
+        
+        // Populate the syntetical view.
+        data = [];
+        results = response.SyntheticalData.Results;
+        for (var i = 0; i < results.length; i++)
+            data.push(
+                [
+                    results[i].Document, 
+                    results[i].Rule,
+                    results[i].Total,
+                    results[i].Failed
+                ]);    
+                    
         $('#syntheticalTable').DataTable(
         {
             data: data,
@@ -161,45 +184,10 @@
         });
     }
     
-    function populateAnalyticalView(response)
-    {
-        // Create the data set.
-        var data = [];
-        for (var i = 0; i < response.length; i++)
-        {
-            var rule = response[i];
-            var document = rule['document'];
-            var name = rule['name'];
-            var results = rule['results'];
-            for (var j = 0; j < results.length; j++)
-            {
-                var result = results[j];
-                data.push([document, name, result['index'], result['value'], result['valid']]);
-            }
-        }
-        
-        // Show the data set.
-        $('#analyticalTable').DataTable(
-        {
-            data: data,
-            columns: [
-                { title: "Document" },
-                { title: "Rule" },
-                { title: "Element Index" },
-                { title: "Element Value" },
-                { title: "Passed" }
-            ]
-        });  
-    }
-    
     // Callback for successful validation.
     function validationSuccess(response)
     {
-        // Populate the syntetical view.
-        populateSynteticalView(response);
-
-        // Populate the analytical view.
-        populateAnalyticalView(response);
+        populateViews(response);
 
         $("#container-rules").addClass("disabledDiv");
         $('#container-results').show();
