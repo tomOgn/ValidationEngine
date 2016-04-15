@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rule type='collect-and-check'>
     <name>Check Dates Format</name>
-	<description>Each date has the same format</description>
+	<description>Each date has the same format dd/mm/yyyy</description>
     <target type='docx' file='document.xml'/>
     <collect-and-check>
         <!-- 

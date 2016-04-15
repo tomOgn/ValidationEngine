@@ -10,7 +10,8 @@
                 xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"
                 xmlns:v="urn:schemas-microsoft-com:vml"
                 exclude-result-prefixes="xsl w v">
-                <xsl:output method="xml" indent="yes" omit-xml-declaration="yes"/>
+                <xsl:output method="xml" encoding="UTF-8" indent="yes" omit-xml-declaration="yes"/>
+                
                 <xsl:template match="/">
                 <items>
                     <xsl:for-each select="//w:tbl">

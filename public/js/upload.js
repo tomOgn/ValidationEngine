@@ -73,7 +73,10 @@
             else if (extension == 'zip')
                 DocType = "application/zip, application/octet-stream";
             else
+            {
+                $('#button-upload').show();
                 return;
+            }  
         }         
         
         // Load the file.  

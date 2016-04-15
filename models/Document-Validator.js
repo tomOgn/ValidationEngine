@@ -231,7 +231,6 @@ var DocValidator = function()
                     result: String,
                     props: { indent: 'yes' }
                 };
-                
                 asyncItems.push(xslt4node.transformSync(config));
                 callback();
             }
@@ -323,7 +322,6 @@ var DocValidator = function()
                         item["index"] = (child.attributes)? child.attributes[0].nodeValue : "";
                         item["value"] = (child.firstChild)? child.firstChild.nodeValue : "";
                         item["valid"] = rule.test(item["value"]);
-                        
                         results.push(item);
                     }
                 }
@@ -405,8 +403,17 @@ var DocValidator = function()
         // Check if it is a ZIP file.
         if (type == 'application/zip, application/octet-stream')
         {
+            // Remove old files.
+            if (fs.existsSync(extractedFolder))
+            {
+                fs.readdirSync(extractedFolder).forEach(function(file, index)
+                {
+                    var filePath = path.join(extractedFolder, file);
+                    fs.unlinkSync(filePath);
+                });
+            }
+                
             // Extract the files.
-            //fs.unlink(extractedFolder);
             var zip = new AdmZip(filePath);
             zip.extractAllTo(extractedFolder);
             
@@ -441,28 +448,30 @@ var DocValidator = function()
                 // Case XML file.
                 case 'application/xml':
                 case 'text/xml':
-                    documentString = fs.readFileSync(file.Path).toString();
+                    documentString = fs.readFileSync(file.Path, 'utf-8').toString();
                     documentPath = file.Path;
                     break;
                 // Case DOCX file.
                 case 'application/vnd.openxmlformats-officedocument.wordprocessingml.document':
                     // Read the document as base 64.
-                    var fileString = fs.readFileSync(file.Path).toString('base64');
+                    //var fileString = fs.readFileSync(file.Path).toString('base64');
                     
                     // Open the document.
-                    var doc = new openXml.OpenXmlPackage(fileString);
+                    //var doc = new openXml.OpenXmlPackage(fileString);
                     
                     // Extract the main part.
-                    var mainPart = doc.mainDocumentPart();
+                    //var mainPart = doc.mainDocumentPart();
 
                     // Set the document as the DOCX main part.
-                    documentString = mainPart.data;
+                    //documentString = mainPart.data;
                     
                     var zip = new AdmZip(file.Path);
                     var basename = path.basename(file.Path, '.docx');
                     var folderPath = path.join(uploadsDirectory, basename);
                     zip.extractAllTo(folderPath);
                     documentPath = path.join(folderPath, 'word/document.xml');
+                    documentString = fs.readFileSync(documentPath, 'utf-8').toString();
+                    
                     break;
                 default:
                     continue;

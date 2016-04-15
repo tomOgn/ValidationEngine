@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<collect-and-check>
-    <collect type='xquery'>
-    	xquery.xql
-    </collect>
-    <check type='regex'>
-        [Figura \d]+ [\w\s]+
-    </check>
-</collect-and-check>
