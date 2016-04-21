@@ -34,15 +34,15 @@ var DocValidator = function()
     };
     
     // Global variables
-    var Documents = [], Types = new Set(), SyntheticalData, AnalyticalData, AllRules, ValidationResults = [];
-    var uploadsDirectory = path.resolve(__dirname, '../public/uploads');
-    var templateDirectory = path.resolve(__dirname, '../templates');
-    var generatedDirectory = path.resolve(__dirname, '../generated');
+    var Documents, Types, SyntheticalData, AnalyticalData, AllRules, ValidationResults;
+    var UploadsDirectory = path.resolve(__dirname, '../public/uploads');
+    var TemplateDirectory = path.resolve(__dirname, '../templates');
+    var GeneratedDirectory = path.resolve(__dirname, '../generated');
     var RulesDirectory = path.resolve(__dirname, '../xml/rules');
-    var extractedFolder = path.join(uploadsDirectory, "extracted");
-    var saxonPath = path.resolve(__dirname, '../saxon/saxon9he.jar');
+    var ExtractedFolder = path.join(UploadsDirectory, "extracted");
+    var SaxonPath = path.resolve(__dirname, '../saxon/saxon9he.jar');
 
-    var namespaces =
+    var Namespaces =
     {
         "w": "http://schemas.openxmlformats.org/wordprocessingml/2006/main",
         "v" : "urn:schemas-microsoft-com:vml"
@@ -203,7 +203,7 @@ var DocValidator = function()
             {
                 var xslPath = path.resolve(__dirname, '../saxon/xslPath.xsl');
                 fs.writeFileSync(xslPath, value, 'utf8');
-                var saxon = new Saxon(saxonPath);
+                var saxon = new Saxon(SaxonPath);
                 saxon.on('error', function(err){ console.log(err) });
                 var readerStream = fs.createReadStream(document.Path).pipe(saxon.xslt(xslPath));
                 var data = '', once = false;
@@ -403,7 +403,7 @@ var DocValidator = function()
 
         // Construct the absolute path.
         fileName = "" + fileName;
-        var filePath = path.join(uploadsDirectory, fileName);
+        var filePath = path.join(UploadsDirectory, fileName);
         
         // Set the DOM Parser.
         Ltxml.DOMParser = dom;
@@ -413,24 +413,24 @@ var DocValidator = function()
             type == 'application/x-zip-compressed')
         {
             // Remove old files.
-            if (fs.existsSync(extractedFolder))
+            if (fs.existsSync(ExtractedFolder))
             {
-                fs.readdirSync(extractedFolder).forEach(function(file, index)
+                fs.readdirSync(ExtractedFolder).forEach(function(file, index)
                 {
-                    var filePath = path.join(extractedFolder, file);
+                    var filePath = path.join(ExtractedFolder, file);
                     fs.unlinkSync(filePath);
                 });
             }
                 
             // Extract the files.
             var zip = new AdmZip(filePath);
-            zip.extractAllTo(extractedFolder);
+            zip.extractAllTo(ExtractedFolder);
             
             // Get all the file names.
-            var extractedFiles = fs.readdirSync(extractedFolder);
+            var extractedFiles = fs.readdirSync(ExtractedFolder);
             extractedFiles.forEach(function(fileName, index)
             {
-                var filePath = path.join(extractedFolder, fileName);
+                var filePath = path.join(ExtractedFolder, fileName);
 
                 var type = mime.lookup(filePath);
                 if (type == 'application/xml' ||
@@ -468,7 +468,7 @@ var DocValidator = function()
                     type = 'docx';
                     var zip = new AdmZip(file.Path);
                     var basename = path.basename(file.Path, '.docx');
-                    var folderPath = path.join(uploadsDirectory, basename);
+                    var folderPath = path.join(UploadsDirectory, basename);
                     zip.extractAllTo(folderPath);
                     documentPath = path.join(folderPath, 'word/document.xml');
                     documentString = fs.readFileSync(documentPath, 'utf-8').toString();
@@ -491,7 +491,7 @@ var DocValidator = function()
     self.DownloadSyntheticalView = function()
     {
         // Open the template.
-        var templatePath = path.join(templateDirectory, "SyntheticalView.docx");
+        var templatePath = path.join(TemplateDirectory, "SyntheticalView.docx");
         var template = fs.readFileSync(templatePath, "binary");
         
         // Get the data.
@@ -499,7 +499,7 @@ var DocValidator = function()
         templater.setData(SyntheticalData);
         templater.render();
         var fileBuffer = templater.getZip().generate({ type: "nodebuffer" });
-        var filePath = path.join(generatedDirectory, "SyntheticalView.docx");
+        var filePath = path.join(GeneratedDirectory, "SyntheticalView.docx");
         fs.writeFileSync(filePath, fileBuffer);
             
         return filePath;
@@ -508,7 +508,7 @@ var DocValidator = function()
     self.DownloadAnalyticalView = function()
     {
         // Open the template.
-        var templatePath = path.join(templateDirectory, "AnalyticalView.docx");
+        var templatePath = path.join(TemplateDirectory, "AnalyticalView.docx");
         var template = fs.readFileSync(templatePath, "binary");
         
         // Get the data.
@@ -516,7 +516,7 @@ var DocValidator = function()
         templater.setData(AnalyticalData);
         templater.render();
         var fileBuffer = templater.getZip().generate({ type: "nodebuffer" });
-        var filePath = path.join(generatedDirectory, "AnalyticalView.docx");
+        var filePath = path.join(GeneratedDirectory, "AnalyticalView.docx");
         fs.writeFileSync(filePath, fileBuffer);
             
         return filePath;

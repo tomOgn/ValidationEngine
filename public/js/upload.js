@@ -113,6 +113,10 @@
         setButtonStatus('success'); 
         $("#container1").addClass("disabledDiv");
         $('#container-rules').show();
+        if (response.length > 0)
+            $('#button-validate').show();
+        else
+            $('#button-validate').hide();
     };
     
     // Callback for unsuccessful upload.
