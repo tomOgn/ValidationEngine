@@ -12,8 +12,12 @@ body {
     font-weight: 300;
 }
 
+.main {
+    margin: 2em;
+}
+
 .container {
-    width: 90%;
+    width: 95%;
     margin-top: 0.5em;
     margin-bottom: 0.5em; 
     display: block;
@@ -103,3 +107,9 @@ body {
     pointer-events: none;
     opacity: 0.4;
 }
+
+table {
+    font-family: 'Helvetica Neue Light', 'Helvetica Neue', 'Segoe UI', Roboto, sans-serif, Arial;
+    font-size: 16px;
+}
+

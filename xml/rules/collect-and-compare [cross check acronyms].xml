@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rule type='collect-and-compare'>
+<rule type='collect-and-compare' target='docx'>
     <name>Cross Check Acronyms</name>
     <description>Check the correct correspondence between acronyms descripted in the table and acronyms found within the document</description>
 	<collect-and-compare>

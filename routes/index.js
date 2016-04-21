@@ -38,7 +38,7 @@ router.get('/getRules', function(req, res)
 // POST method for validating the document according to a selected list of rules.
 router.post('/validation', function(req, res, next)
 {
-    validator.fireRules(req.body.Rules, res);
+    validator.fireRules(req.body.Rules, res, next);
 });
 
 // POST method for uploading the file.
@@ -52,10 +52,8 @@ router.post('/upload', function(req, res, next)
     if (dataObj) 
         fs.writeFile(filepath, dataObj.data, function(err)
         {
-            if (err)
-                next(err);
-            else
-                res.send(validator.SetDocument(fileName, type));
+            if (err) next(err);
+            res.send(validator.SetDocument(fileName, type));
         });
     else 
         next({ error: 'Unable to read data.' });

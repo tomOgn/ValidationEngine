@@ -34,7 +34,7 @@ var DocValidator = function()
     };
     
     // Global variables
-    var Documents = [], SyntheticalData, AnalyticalData, AllRules, ValidationResults = [];
+    var Documents = [], Types = new Set(), SyntheticalData, AnalyticalData, AllRules, ValidationResults = [];
     var uploadsDirectory = path.resolve(__dirname, '../public/uploads');
     var templateDirectory = path.resolve(__dirname, '../templates');
     var generatedDirectory = path.resolve(__dirname, '../generated');
@@ -331,7 +331,7 @@ var DocValidator = function()
         }
     }
     
-    function prepareViewsData()
+    function prepareResponse()
     {
         // Create Synthetical and Analytical View data.
         AnalyticalData = {'Results' : []};
@@ -361,10 +361,16 @@ var DocValidator = function()
             }
             SyntheticalData.Results.push({'Document': document, 'Rule': name, 'Total': matches, 'Failed': failed});
         }
+        
+        // Sort by document name.
+        SyntheticalData.Results.sort(function(a, b)
+        {
+            return a.Document.localeCompare(b.Document);
+        });
     }
     
     // Validate the document against the selected rules.
-    self.fireRules = function(rules, response)
+    self.fireRules = function(rules, response, next)
     {
         ValidationResults = [];
 
@@ -376,13 +382,14 @@ var DocValidator = function()
             },
             function(err)
             {
+                if (err) return next(err);
                 callbackDocument();
             });
         },
-        function(err)
+        function(err)      
         {
-            prepareViewsData();
-            
+            if (err) return next(err);
+            prepareResponse();
             response.send({ 'AnalyticalData' : AnalyticalData, 'SyntheticalData' : SyntheticalData });
         });
     }
@@ -391,6 +398,7 @@ var DocValidator = function()
     self.SetDocument = function(fileName, type)
     {
         Documents = [];
+        Types = new Set();
         var files = [];
 
         // Construct the absolute path.
@@ -401,7 +409,8 @@ var DocValidator = function()
         Ltxml.DOMParser = dom;
         
         // Check if it is a ZIP file.
-        if (type == 'application/zip, application/octet-stream')
+        if (type == 'application/zip, application/octet-stream' ||
+            type == 'application/x-zip-compressed')
         {
             // Remove old files.
             if (fs.existsSync(extractedFolder))
@@ -422,11 +431,12 @@ var DocValidator = function()
             extractedFiles.forEach(function(fileName, index)
             {
                 var filePath = path.join(extractedFolder, fileName);
+
                 var type = mime.lookup(filePath);
                 if (type == 'application/xml' ||
                     type == 'text/xml' ||
                     type == 'application/vnd.openxmlformats-officedocument.wordprocessingml.document')
-                    files.push({ Path : filePath, Name : fileName, Type : type });    
+                        files.push({ Path : filePath, Name : fileName, Type : type });  
             });
             
             // Destroy the ZIP file.
@@ -441,6 +451,7 @@ var DocValidator = function()
         for (var i = 0; i < files.length; i++)
         {
             var file = files[i], documentPath;
+            var type;
             
             // Distinguish between DOCX and XML files.
             switch (file.Type)
@@ -448,43 +459,33 @@ var DocValidator = function()
                 // Case XML file.
                 case 'application/xml':
                 case 'text/xml':
+                    type = 'xml';
                     documentString = fs.readFileSync(file.Path, 'utf-8').toString();
                     documentPath = file.Path;
                     break;
                 // Case DOCX file.
                 case 'application/vnd.openxmlformats-officedocument.wordprocessingml.document':
-                    // Read the document as base 64.
-                    //var fileString = fs.readFileSync(file.Path).toString('base64');
-                    
-                    // Open the document.
-                    //var doc = new openXml.OpenXmlPackage(fileString);
-                    
-                    // Extract the main part.
-                    //var mainPart = doc.mainDocumentPart();
-
-                    // Set the document as the DOCX main part.
-                    //documentString = mainPart.data;
-                    
+                    type = 'docx';
                     var zip = new AdmZip(file.Path);
                     var basename = path.basename(file.Path, '.docx');
                     var folderPath = path.join(uploadsDirectory, basename);
                     zip.extractAllTo(folderPath);
                     documentPath = path.join(folderPath, 'word/document.xml');
                     documentString = fs.readFileSync(documentPath, 'utf-8').toString();
-                    
                     break;
                 default:
                     continue;
             }
-
-            // Set the variable holding the document.
-            Documents.push({ Path : documentPath, Name : file.Name, Text : documentString, DOM : new dom().parseFromString(documentString) });
+            
+            // Set the global variables.
+            Types.add(type);
+            Documents.push({ Type : type, Path : documentPath, Name : file.Name, Text : documentString, DOM : new dom().parseFromString(documentString) });
             
             // Destroy the temporary file.
             //fs.unlink(file.Path);
         }
 
-        return true;
+        return self.GetRules();
     }
     
     self.DownloadSyntheticalView = function()
@@ -530,9 +531,13 @@ var DocValidator = function()
         AllRules = {};
         var data = [];
         for (var i = 0; i < rulePaths.length; i++)
-            data.push(getMetadata(rulePaths[i]));
+        {
+            var metadata = getMetadata(rulePaths[i]);
+            if (Types.has(metadata[0]))
+                data.push(metadata);
+        }
         
-        return { "data" : data };
+        return data;
         
         // Retrieve the metadata from a given Rule Set directory.
         function getMetadata(rulePath)
@@ -549,12 +554,12 @@ var DocValidator = function()
             // Get the metadata.
             var name = xpath.select("/rule/name/text()", fileDom).toString();
             var description = xpath.select("/rule/description/text()", fileDom).toString();
-            var target = xpath.select("/rule/target/@type", fileDom).value;
-            
+            var target = xpath.select("/rule/@target", fileDom)[0].value;
+
             // Populate the global variable.
             AllRules[name] = rulePath;
             
-            return [name, description];
+            return [target, name, description];
         }
     }
 };

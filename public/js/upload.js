@@ -1,7 +1,8 @@
 (function()
 {
     var DocSource, DocType, DocName;
-
+    var firstLoad = true;
+    
     $("#tabs").tabs();
     
     function setButtonStatus(status)
@@ -39,22 +40,6 @@
         }
     }
 
-    $('#ruleSetsTable').DataTable(
-    {
-        "ajax": "/getRules"
-    });
-
-    $('#ruleSetsTable tbody').on( 'click', 'tr', function ()
-    {
-        $(this).toggleClass('selected');
-        var table = $('#ruleSetsTable').DataTable();
-        var numRows = table.rows('.selected').data().length;
-        if ((numRows > 0))
-            $('#button-validate').show();
-        else
-            $('#button-validate').hide();
-    });
-
     // File input handler.
     var handleFileInput = function(e)
     {
@@ -74,7 +59,7 @@
                 DocType = "application/zip, application/octet-stream";
             else
             {
-                $('#button-upload').show();
+                $('#button-upload').hide();
                 return;
             }  
         }         
@@ -98,12 +83,36 @@
     // Callback for successful upload.
     var successfulUpload = function(response)
     {
-        var table = $('#ruleSetsTable').DataTable();
-        table.rows().select();
+        var table = $('#ruleSetsTable');
+        table.DataTable(
+        {
+            data: response,
+            columns: [
+                { title: "Target" },
+                { title: "Name" },
+                { title: "Description" }
+            ]
+        });
+        table.DataTable().rows().select();
+        
+        if (firstLoad)
+        {
+            $('#ruleSetsTable tbody').on( 'click', 'tr', function ()
+            {
+                $(this).toggleClass('selected');
+                var table = $('#ruleSetsTable').DataTable();
+                var numRows = table.rows('.selected').data().length;
+                if (numRows > 0)
+                    $('#button-validate').show();
+                else
+                    $('#button-validate').hide();
+            }); 
+            firstLoad = false;
+        }
+        
         setButtonStatus('success'); 
         $("#container1").addClass("disabledDiv");
         $('#container-rules').show();
-        $('#button-validate').show();
     };
     
     // Callback for unsuccessful upload.
@@ -204,7 +213,7 @@
         var selectedRows = table.rows('.selected').data();
         var rules = [];
         for (var i = 0; i < selectedRows.length; i++)
-            rules.push(selectedRows[i][0]);
+            rules.push(selectedRows[i][1]);
         
         // Perform the validation and get the results.
         $.ajax({
@@ -213,7 +222,7 @@
             url: '/validation',
             data: { Rules: rules },
             success: validationSuccess,
-            error: function() { alert(err); }
+            error: function(xhr, status, err) { alert(err); }
         });
     }
     
@@ -225,6 +234,7 @@
     $('#close1').click(function()
     {
         $('#container-rules').hide();
+        $('#ruleSetsTable').dataTable().fnDestroy();
         setButtonStatus('ready');
         $("#container1").removeClass("disabledDiv");
     });
