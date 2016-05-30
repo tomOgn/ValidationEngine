@@ -78,7 +78,25 @@ var DocValidator = function()
         // Get rule name and description.
         var ruleDescription = xpath.select("//description/text()", ruleDom).toString();
         var ruleName = xpath.select("//name/text()", ruleDom).toString();
-        
+        var ruleTarget = xpath.select("/rule/@target", ruleDom)[0].value;
+
+        // Set the document accordingly to the rule target.
+        var documentPath;
+        console.log('document.Type = ' + document.Type);
+        switch (document.Type)
+        {
+            case "xml":
+                documentPath = document.Path;
+                break;
+            case "docx":
+                subTarget = xpath.select("/rule/@subtarget", ruleDom)[0].value;
+                documentPath = path.join(document.Path, 'word', subTarget);
+                console.log('documentPath = ' + documentPath);
+                break;
+        }
+        documentText = fs.readFileSync(documentPath, 'utf-8').toString();
+        documentDOM = new dom().parseFromString(documentText);
+
         // Distinguish between Collect-And-Check and Collect-And-Compare rules.
         var ruleType = xpath.select("/rule/@type", ruleDom)[0].value;
         var collectValue, collectType;
@@ -205,7 +223,7 @@ var DocValidator = function()
                 fs.writeFileSync(xslPath, value, 'utf8');
                 var saxon = new Saxon(SaxonPath);
                 saxon.on('error', function(err){ console.log(err) });
-                var readerStream = fs.createReadStream(document.Path).pipe(saxon.xslt(xslPath));
+                var readerStream = fs.createReadStream(documentPath).pipe(saxon.xslt(xslPath));
                 var data = '', once = false;
                 
                 readerStream.on('data', (chunk) =>
@@ -227,7 +245,7 @@ var DocValidator = function()
                 var config =
                 {
                     xslt: value,
-                    source: document.Text,
+                    source: documentText,
                     result: String,
                     props: { indent: 'yes' }
                 };
@@ -243,7 +261,7 @@ var DocValidator = function()
                 // Add the children elements.
                 var value = xpath.select("//collect/text()", ruleDom).toString();
                 var expression = XRegExp(value);
-                XRegExp.forEach(document.Text, expression, function(match, i)
+                XRegExp.forEach(documentText, expression, function(match, i)
                 {
                     xml.ele('item', {'i': i}, match[0]);
                 });
@@ -258,7 +276,7 @@ var DocValidator = function()
                 var xml = xmlbuilder.create('items', { headless: true });
                 
                 // Add the children elements. 
-                var nodes = xpath.select(value, document.DOM)
+                var nodes = xpath.select(value, documentDOM)
                 for (var i = 0; i < nodes.length; i++)
                     xml.ele('item', {'i': i}, nodes[i]);
                 xml.end(xmlbuilder.stringWriter());
@@ -390,7 +408,7 @@ var DocValidator = function()
         {
             if (err) return next(err);
             prepareResponse();
-            response.send({ 'AnalyticalData' : AnalyticalData, 'SyntheticalData' : SyntheticalData });
+            response.send({'AnalyticalData' : AnalyticalData, 'SyntheticalData' : SyntheticalData});
         });
     }
     
@@ -447,7 +465,7 @@ var DocValidator = function()
             files.push({ Path : filePath, Name : fileName, Type : type });
         }
         
-        var documentString;
+        var documentString, validDocument = true;
         for (var i = 0; i < files.length; i++)
         {
             var file = files[i], documentPath;
@@ -460,8 +478,8 @@ var DocValidator = function()
                 case 'application/xml':
                 case 'text/xml':
                     type = 'xml';
-                    documentString = fs.readFileSync(file.Path, 'utf-8').toString();
                     documentPath = file.Path;
+                    validDocument = true;
                     break;
                 // Case DOCX file.
                 case 'application/vnd.openxmlformats-officedocument.wordprocessingml.document':
@@ -470,16 +488,19 @@ var DocValidator = function()
                     var basename = path.basename(file.Path, '.docx');
                     var folderPath = path.join(UploadsDirectory, basename);
                     zip.extractAllTo(folderPath);
-                    documentPath = path.join(folderPath, 'word/document.xml');
-                    documentString = fs.readFileSync(documentPath, 'utf-8').toString();
+                    documentPath = folderPath;
+                    validDocument = true;
                     break;
                 default:
+                    validDocument = false;
                     continue;
             }
-            
+            if (!validDocument)
+                return;
+
             // Set the global variables.
             Types.add(type);
-            Documents.push({ Type : type, Path : documentPath, Name : file.Name, Text : documentString, DOM : new dom().parseFromString(documentString) });
+            Documents.push({ Type : type, Path : documentPath, Name : file.Name});
             
             // Destroy the temporary file.
             //fs.unlink(file.Path);
@@ -521,10 +542,10 @@ var DocValidator = function()
             
         return filePath;
     }
-
+    
+    // Get all rules available for the documents previously uploaded by the client.
     self.GetRules = function()
     {
-        // Get all the rules.
         var rulePaths = fs.readdirSync(RulesDirectory);
         
         // Construct the list of metadata.

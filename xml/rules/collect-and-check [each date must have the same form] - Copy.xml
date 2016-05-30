@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rule type='collect-and-check' target='docx' subtarget='document.xml'>
-    <name>Check Dates Format: dd/mm/yyyy</name>
-	<description>Each date within the document has the format dd/mm/yyyy.</description>
+    <name>Check Dates Format: dd-mm-yyyy</name>
+	<description>Each date within the document has the format dd-mm-yyyy.</description>
     <collect-and-check>
         <!-- 
         d-m-yy | d-m-yyyy | dd-mm-yyyy | dd-mm-yy | 
@@ -10,6 +10,6 @@
         -->
         <collect type='Regex'>(0?[1-9]|[12][0-9]|3[01])([-/.])(0?[1-9]|1[012])\2(19|20)?\d\d</collect>
         <!-- dd/mm/yyyy -->
-        <check type='Regex'>(0[1-9]|[12][0-9]|3[01])(\/)(0[1-9]|1[012])(\/)(19|20)\d\d</check>
+        <check type='Regex'>(0?[1-9]|[12][0-9]|3[01])(-)(0?[1-9]|1[012])(-)(19|20)?\d\d</check>
     </collect-and-check>
 </rule>

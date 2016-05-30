@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rule type='collect-and-check' target='docx'>
+<rule type='collect-and-check' target='docx' subtarget='document.xml'>
     <name>Check Tables Description</name>
-	<description>Each table has a well-formed description</description>
-    <target type='docx'/>
+	<description>Each table has a well-formed description: (Tabella \d) [\w\s]+</description>
     <collect-and-check>
         <collect type='XSLT 1'>
             <xsl:stylesheet version="1.0" 

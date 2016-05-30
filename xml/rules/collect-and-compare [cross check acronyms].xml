@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rule type='collect-and-compare' target='docx'>
+<rule type='collect-and-compare' target='docx' subtarget='document.xml'>
     <name>Cross Check Acronyms</name>
     <description>Check the correct correspondence between acronyms descripted in the table and acronyms found within the document</description>
 	<collect-and-compare>
@@ -62,7 +62,7 @@
 			    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 			    xmlns:xs="http://www.w3.org/2001/XMLSchema"
 			    exclude-result-prefixes="xs"
-			    version="2.0">
+			    version="1.0">
 			    <xsl:output method="xml" indent="yes" omit-xml-declaration="yes"/>
 			    <xsl:template match="/">
 			        <results>
