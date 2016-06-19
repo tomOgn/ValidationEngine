@@ -11,6 +11,8 @@ block content
             .row
                 p
                     span.step (1) Select the document to validate (docx or xml or zip):
+                    a(href="/logout")
+                        img(src='img/logout.png')#logout.close-button
             .row
                 input#file-input(type='file' name='file')
                 button#button-upload.btn.btn-primary(type='submit')

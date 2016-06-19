@@ -1,3 +1,4 @@
+// Dependencies.
 var config = require('./config/config');
 var express = require('express');
 var path = require('path');
@@ -7,8 +8,12 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var auth = require('basic-auth');
 var routes = require('./routes/index');
+var mongoose = require('mongoose');
+var passport = require('passport');
+var LocalStrategy = require('passport-local').Strategy;
 
 var app = express();
+
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 app.use(favicon(__dirname + '/public/img/alstom.ico'));
@@ -19,22 +24,25 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 app.use(cookieParser());
+app.use(require('express-session')({
+    secret: 'keyboard cat',
+    resave: false,
+    saveUninitialized: false
+}));
+app.use(passport.initialize());
+app.use(passport.session());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(function (req, res, next)
-{
-    var user = auth(req);
-    if (!user || user.name !== config.username || user.pass !== config.password)
-    {
-        res.writeHead(401,
-        {
-            'WWW-Authenticate': 'Basic realm="Authentication is required."'
-        });
-        res.end();
-    } 
-    else
-        next();
-});
+
 app.use('/', routes);
+
+// Passport configuration.
+var Account = require('./models/account');
+passport.use(new LocalStrategy(Account.authenticate()));
+passport.serializeUser(Account.serializeUser());
+passport.deserializeUser(Account.deserializeUser());
+
+// MongoDB connection.
+mongoose.connect('mongodb://localhost/ValidationEngine');
 
 // Catch 404 and forward to error handler.
 app.use(function(req, res, next)
@@ -44,7 +52,7 @@ app.use(function(req, res, next)
     next(err);
 });
 
-// Development error handler will print stacktrace.
+// Development error handler.
 if (app.get('env') === 'development')
 {
     app.use(function(err, req, res, next)
@@ -59,7 +67,7 @@ if (app.get('env') === 'development')
     });
 }
 
-// Production error handler no stacktraces leaked to user.
+// Production error handler.
 app.use(function(err, req, res, next)
 {
     res.status(err.status || 500);

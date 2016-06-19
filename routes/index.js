@@ -1,11 +1,13 @@
-// Libraries.
+// Dependencies.
 var async = require("async");
-var express = require('express');
-var fs = require('fs');
 var dataurl = require('dataurl');
 var docxtemplater = require('docxtemplater');
+var express = require('express');
+var fs = require('fs');
+var passport = require('passport');
 var path = require('path');
 
+var Account = require('../models/account');
 var DocumentValidator = require("../models/Document-Validator.js");
 
 // Global variables
@@ -14,10 +16,28 @@ var validator = new DocumentValidator();
 var uploadsDir = 'public/uploads/';
 var rulesDir = path.resolve(__dirname, '../xml/rule-sets');
 
-// Home page.
-router.get('/', function(req, res)
+router.get('/', function (req, res)
 {
-    res.render('index');
+    if (req.user)
+        res.render('index', { user : req.user });
+    else
+        res.render('login', { user : req.user });
+});
+
+router.get('/login', function(req, res)
+{
+    res.render('login', { user : req.user });
+});
+
+router.post('/login', passport.authenticate('local'), function(req, res)
+{
+    res.redirect('/');
+});
+
+router.get('/logout', function(req, res)
+{
+    req.logout();
+    res.redirect('/login');
 });
 
 // Return all directories within a given path.

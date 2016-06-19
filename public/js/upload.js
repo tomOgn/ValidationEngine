@@ -235,6 +235,7 @@
     $('#button-validate').click(validateDocument);
     $('#button-download-SyntheticalView').click(function() { window.open('/downloadSyntheticalView'); });
     $('#button-download-AnalyticalView').click(function() { window.open('/downloadAnalyticalView'); });
+
     $('#close1').click(function()
     {
         $('#container-rules').hide();
