@@ -1,5 +1,5 @@
 {
-  "name": "web-document-validator",
+  "name": "validation-engine",
   "version": "0.0.1",
   "ignore": [
     "**/.*",
