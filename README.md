@@ -36,5 +36,5 @@ The Validation Engine uses a number of open source projects:
    [node.js]: <http://nodejs.org>
    [jQuery]: <http://jquery.com>
    [express]: <http://expressjs.com>
-   [Passport.js]: <passportjs.org> 
-   [MongoDB]: <www.mongodb.com>
+   [Passport.js]: <http://passportjs.org> 
+   [MongoDB]: <https://www.mongodb.com>
