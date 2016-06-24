@@ -1,17 +1,42 @@
 # Validation Engine
 
-Validation Engine is a rule-based online tool for validating documents.
+Validation Engine is a rule-based online tool for validating documents. 
 
 The documents must have the following format: XML; DOCX; ZIP containing XML or DOCX.
+
+### Rules
 
 The rules are expressed via XML and are of two types, namely:
 - Collect-And-Check
 - Collect-And-Compare
 
-The rules may cantain XPath, XQuery, XSLT and Regex.
+#### Collect-And-Check
+With Collect-And-Check you can collect a list of elements from the document and check their validity through a syntactical rule.
 
+The <collect> part may be formed using:
+- Regex: <collect type=’Regex’>, or
+- XPath 1.0: <collect type=’XPath 1’>, or
+- XSLT 1.0: <collect type=’XSLT 1’>, or
+- XSLT 2.0: <collect type=’XSLT 2’>.
 
-### UML Class diagram
+The <check> part may be formed using:
+- Regex: <check type=’Regex’>, or
+- XSLT 1.0: <check type=’XSLT 1’>, or
+- XSLT 2.0: <check type=’XSLT 2’>.
+- 
+#### Collect-And-Compare
+With Collect-And-Compare you can collect two or more lists of items from the document and compare them via a syntactical rule.
+
+The <collect> part may be formed using:
+- XPath 1.0: <collect type=’XPath 1’>, or
+- XSLT 1.0: <collect type=’XSLT 1’>, or
+- XSLT 2.0: <collect type=’XSLT 2’>.
+
+The <compare> part may be formed using:
+- XSLT 1.0: <collect type=’XSLT 1’>, or
+- XSLT 2.0: <collect type=’XSLT 2’>.
+
+### UML Use Case diagram
 
 ![alt text](https://github.com/tomOgn/ValidationEngine/blob/master/use-case-validator.png)
 
