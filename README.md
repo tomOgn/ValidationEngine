@@ -40,14 +40,6 @@ The <compare> part may be formed using:
 
 ![alt text](https://github.com/tomOgn/ValidationEngine/blob/master/use-case-validator.png)
 
-### Installation
-To build and run the project locally you need to perform the following actions:
-  - npm install
-  - bower install
-  - mongod
-  - node bin/www
-  - http://localhost:3000/
-
 ### Technological Stack
 The Validation Engine uses a number of open source projects:
 
@@ -57,6 +49,13 @@ The Validation Engine uses a number of open source projects:
 * [Passport.js]
 * [jQuery]
 
+### Installation
+To build and run the project locally you need to perform the following actions:
+  - npm install
+  - bower install
+  - mongod
+  - node bin/www
+  - http://localhost:3000/
  
    [node.js]: <http://nodejs.org>
    [jQuery]: <http://jquery.com>
