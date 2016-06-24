@@ -4,7 +4,7 @@ Validation Engine is a rule-based online tool for validating documents.
 
 The documents must have the following format: XML; DOCX; ZIP containing XML or DOCX.
 
-The Account Management is intended to be separated and not public, an example is here: https://github.com/tomOgn/ValidationEngineUserManagement.
+The User Management is intended to be separated and not public, an example is here: https://github.com/tomOgn/ValidationEngineUserManagement.
 ### Rules
 
 The rules are expressed via XML and are of two types, namely:
